@@ -20,7 +20,7 @@ CREATE TABLE Booking (
 CREATE TABLE Discount (
     DiscountID CHAR(6) PRIMARY KEY,
     DiscountCode CHAR(6) NOT NULL,
-    DiscountAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
+    DiscountRate NUMBER(2)DEFAULT 0.0 NOT NULL,
     ExpiryDate DATE NOT NULL
 );
 
