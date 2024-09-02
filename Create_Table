@@ -1,159 +1,176 @@
+DROP TABLE BookingDetails;
+DROP TABLE Purchase;
+DROP TABLE Maintenance;
+DROP TABLE WorkAllocation;
+DROP TABLE Booking;
+DROP TABLE Policy;
+DROP TABLE InsuranceClaim;
+DROP TABLE Seat;
+DROP TABLE FlightSchedule;
+DROP TABLE Luggage;
+DROP TABLE Staff;
+DROP TABLE Item;
+DROP TABLE Insurance;
+DROP TABLE Part;
+DROP TABLE Airplane;
+DROP TABLE Discount;
+DROP TABLE Passenger;
+DROP TABLE Member;
+
 CREATE TABLE Member (
-    MemberID CHAR(6) PRIMARY KEY,
-    MemberName VARCHAR2(30) NOT NULL,
-    MemberEmail VARCHAR2(30),
-    MemberPhone VARCHAR2(11) NOT NULL,
-    CONSTRAINT chk_Member_Phone CHECK (REGEXP_LIKE(MemberPhone, '^01[0-9]{8}$')),
-    CONSTRAINT chk_Member_Email CHECK (REGEXP_LIKE(MemberEmail, '^[^@]+@[^@]+\.[^@]+$'))
-);
-
-CREATE TABLE Booking (
-    BookingID CHAR(6) PRIMARY KEY,
-    BookingDate DATE NOT NULL,
-    TotalAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
-    MemberID CHAR(6) NOT NULL,
-    DiscountID CHAR(6),
-    FOREIGN KEY (MemberID) REFERENCES Member(MemberID),
-    FOREIGN KEY (DiscountID) REFERENCES Discount(DiscountID)
-);
-
-CREATE TABLE Discount (
-    DiscountID CHAR(6) PRIMARY KEY,
-    DiscountCode CHAR(6) NOT NULL,
-    DiscountRate NUMBER(2) DEFAULT 0.0 NOT NULL,
-    ExpiryDate DATE NOT NULL
-);
-
-CREATE TABLE BookingDetails (
-    BookingID CHAR(6) NOT NULL,
-    PassengerID CHAR(6) NOT NULL,
-    Price NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
-    Way VARCHAR2(3) NOT NULL,
-    FlightScheduleID CHAR(6),
-    SeatID CHAR(3),
-    PRIMARY KEY (BookingID, PassengerID),
-    FOREIGN KEY (BookingID) REFERENCES Booking(BookingID),
-    FOREIGN KEY (FlightScheduleID) REFERENCES FlightSchedule(FlightScheduleID),
-    FOREIGN KEY (SeatID) REFERENCES Seat(SeatID),
-    FOREIGN KEY (PassengerID) REFERENCES Passenger(PassengerID)
-);
-
-CREATE TABLE FlightSchedule (
-    FlightScheduleID CHAR(6) PRIMARY KEY,
-    FlightDate DATE NOT NULL,
-    FlightNumber VARCHAR2(20) NOT NULL,
-    DepartureTime TIMESTAMP NOT NULL,
-    ArrivalTime TIMESTAMP NOT NULL,
-    Origin VARCHAR2(20) NOT NULL,
-    Destination VARCHAR2(20) NOT NULL,
-    AirplaneID CHAR(6) NOT NULL,
-    FOREIGN KEY (AirplaneID) REFERENCES Airplane(AirplaneID)
-);
-
-CREATE TABLE Airplane (
-    AirplaneID CHAR(6) PRIMARY KEY,
-    Model VARCHAR2(10) NOT NULL,
-    Capacity NUMBER(3) NOT NULL
-);
-
-CREATE TABLE Seat (
-    SeatID CHAR(3) PRIMARY KEY,
-    SeatNumber VARCHAR2(10) NOT NULL,
-    Class VARCHAR2(20) NOT NULL,
-    AirplaneID CHAR(6) NOT NULL,
-    FOREIGN KEY (AirplaneID) REFERENCES Airplane(AirplaneID)
+    memberID CHAR(6) PRIMARY KEY,
+    memberName VARCHAR(30) NOT NULL,
+    memberEmail VARCHAR(30),
+    memberPhone VARCHAR(11) NOT NULL,
+    CONSTRAINT chk_Member_Phone CHECK (REGEXP_LIKE(memberPhone, '^01[0-9]{8}$')),
+    CONSTRAINT chk_Member_Email CHECK (REGEXP_LIKE(memberEmail, '^[^@]+@[^@]+\.[^@]+$'))
 );
 
 CREATE TABLE Passenger (
-    PassengerID CHAR(6) PRIMARY KEY,
-    PassengerName VARCHAR2(30) NOT NULL,
-    PassportNumber VARCHAR2(20) NOT NULL,
-    DOB DATE NOT NULL,
-    Gender CHAR(1) NOT NULL
+    passengerID CHAR(6) PRIMARY KEY,
+    passengerName VARCHAR(30) NOT NULL,
+    passportNumber VARCHAR(20) NOT NULL,
+    dOB DATE NOT NULL,
+    gender CHAR(1) NOT NULL
 );
 
-CREATE TABLE CheckingLuggage (
-    CheckingLuggageID CHAR(6) PRIMARY KEY,
-    PassengerID CHAR(6) NOT NULL,
-    LuggageID CHAR(6) NOT NULL,
-    FOREIGN KEY (PassengerID) REFERENCES Passenger(PassengerID),
-    FOREIGN KEY (LuggageID) REFERENCES Luggage(LuggageID)
+CREATE TABLE Discount (
+    discountID CHAR(6) PRIMARY KEY,
+    discountCode CHAR(6) NOT NULL,
+    discountRate NUMBER(2) DEFAULT 0.0 NOT NULL,
+    expiryDate DATE NOT NULL
 );
 
-CREATE TABLE Luggage (
-    LuggageID CHAR(6) PRIMARY KEY,
-    Weight NUMBER(5, 2) NOT NULL
-);
-
-CREATE TABLE InsuranceClaim (
-    ClaimID CHAR(6) PRIMARY KEY,
-    ClaimDate DATE NOT NULL,
-    ClaimAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
-    PassengerID CHAR(6),
-    PolicyID CHAR(6),
-    FOREIGN KEY (PassengerID) REFERENCES Passenger(PassengerID),
-    FOREIGN KEY (PolicyID) REFERENCES Policy(PolicyID)
-);
-
-CREATE TABLE Policy (
-    PolicyID CHAR(6) PRIMARY KEY,
-    PolicyNumber VARCHAR2(20) NOT NULL,
-    CoverageAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL
-);
-
-CREATE TABLE Insurance (
-    InsuranceID CHAR(6) PRIMARY KEY,
-    InsuranceName VARCHAR2(30) NOT NULL,
-    Description CLOB NOT NULL,
-    PolicyID CHAR(6),
-    FOREIGN KEY (PolicyID) REFERENCES Policy(PolicyID)
-);
-
-CREATE TABLE Purchase (
-    PurchaseID CHAR(6) PRIMARY KEY,
-    Quantity NUMBER(2) NOT NULL,
-    ItemID CHAR(6) NOT NULL,
-    BookingID CHAR(6) NOT NULL,
-    PassengerID CHAR(6) NOT NULL,
-    FOREIGN KEY (ItemID) REFERENCES Item(ItemID),
-    FOREIGN KEY (BookingID) REFERENCES Booking(BookingID),
-    FOREIGN KEY (PassengerID) REFERENCES Passenger(PassengerID)
-);
-
-CREATE TABLE Item (
-    ItemID CHAR(6) PRIMARY KEY,
-    ItemName VARCHAR2(100) NOT NULL,
-    ItemPrice NUMBER(10, 2) DEFAULT 0.0 NOT NULL
-);
-
-CREATE TABLE WorkAllocation (
-    AllocationID CHAR(6) PRIMARY KEY,
-    StaffID CHAR(6) NOT NULL,
-    FlightScheduleID CHAR(6) NOT NULL,
-    FOREIGN KEY (StaffID) REFERENCES Staff(StaffID),
-    FOREIGN KEY (FlightScheduleID) REFERENCES FlightSchedule(FlightScheduleID)
-);
-
-CREATE TABLE Staff (
-    StaffID CHAR(6) PRIMARY KEY,
-    Name VARCHAR2(30) NOT NULL,
-    Role VARCHAR2(10) NOT NULL,
-    StaffPhone VARCHAR2(11) NOT NULL,
-    CONSTRAINT chk_Staff_Phone CHECK (REGEXP_LIKE(StaffPhone, '^01[0-9]{8}$'))
-);
-
-CREATE TABLE Maintenance (
-    MaintenanceID CHAR(6) PRIMARY KEY,
-    MaintenanceDate DATE NOT NULL,
-    AirplaneID CHAR(6) NOT NULL,
-    PartID CHAR(6) NOT NULL,
-    FOREIGN KEY (AirplaneID) REFERENCES Airplane(AirplaneID),
-    FOREIGN KEY (PartID) REFERENCES Part(PartID)
+CREATE TABLE Airplane (
+    airplaneID CHAR(6) PRIMARY KEY,
+    model VARCHAR(10) NOT NULL,
+    capacity NUMBER(3) NOT NULL
 );
 
 CREATE TABLE Part (
-    PartID CHAR(6) PRIMARY KEY,
-    PartName VARCHAR2(20) NOT NULL
+    partID CHAR(6) PRIMARY KEY,
+    partName VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE Insurance (
+    insuranceID CHAR(6) PRIMARY KEY,
+    insuranceName VARCHAR(30) NOT NULL,
+    Description VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Item (
+    itemID CHAR(6) PRIMARY KEY,
+    itemName VARCHAR(100) NOT NULL,
+    itemPrice NUMBER(10, 2) DEFAULT 0.0 NOT NULL
+);
+
+CREATE TABLE Staff (
+    staffID CHAR(6) PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    role VARCHAR(10) NOT NULL,
+    staffPhone VARCHAR(11) NOT NULL,
+    CONSTRAINT chk_Staff_Phone CHECK (REGEXP_LIKE(staffPhone, '^01[0-9]{8}$'))
+);
+
+
+CREATE TABLE Luggage (
+    luggageID CHAR(6) PRIMARY KEY,
+    weight NUMBER(5, 2) NOT NULL,
+    bookingID CHAR(6) NOT NULL,
+    FOREIGN KEY (bookingID) REFERENCES Booking(bookingID)
+);
+
+CREATE TABLE FlightSchedule (
+    flightScheduleID CHAR(6) PRIMARY KEY,
+    flightNumber VARCHAR(20) NOT NULL,
+    flightDate DATE NOT NULL,
+    departureTime TIMESTAMP NOT NULL,
+    arrivalTime TIMESTAMP NOT NULL,
+    origin VARCHAR(20) NOT NULL,
+    destination VARCHAR(20) NOT NULL,
+    airplaneID CHAR(6) NOT NULL,
+    FOREIGN KEY (airplaneID) REFERENCES Airplane(airplaneID)
+);
+
+CREATE TABLE Seat (
+    seatID CHAR(3) PRIMARY KEY,
+    seatNumber VARCHAR(10) NOT NULL,
+    class VARCHAR(20) NOT NULL,
+    airplaneID CHAR(6) NOT NULL,
+    FOREIGN KEY (airplaneID) REFERENCES Airplane(airplaneID)
+);
+
+CREATE TABLE Policy (
+    policyID CHAR(6) PRIMARY KEY,
+    policyNumber VARCHAR(20) NOT NULL,
+    coverageAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
+    insuranceID CHAR(6) NOT NULL,
+    FOREIGN KEY (insuranceID) REFERENCES Insurance(insuranceID)
+);
+
+CREATE TABLE InsuranceClaim (
+    claimID CHAR(6) PRIMARY KEY,
+    claimDate DATE NOT NULL,
+    claimAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
+    policyID CHAR(6),
+    FOREIGN KEY (policyID) REFERENCES Policy(policyID)
+);
+
+CREATE TABLE Booking (
+    bookingID CHAR(6) PRIMARY KEY,
+    bookingDate DATE NOT NULL,
+    totalAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
+    memberID CHAR(6) NOT NULL,
+    discountID CHAR(6),
+    FOREIGN KEY (memberID) REFERENCES Member(memberID),
+    FOREIGN KEY (discountID) REFERENCES Discount(discountID)
+);
+
+CREATE TABLE WorkAllocation (
+    allocationID CHAR(6) PRIMARY KEY,
+    staffID CHAR(6) NOT NULL,
+    flightScheduleID CHAR(6) NOT NULL,
+    FOREIGN KEY (staffID) REFERENCES Staff(staffID),
+    FOREIGN KEY (flightScheduleID) REFERENCES FlightSchedule(flightScheduleID)
+);
+
+CREATE TABLE Maintenance (
+    maintenanceID CHAR(6) PRIMARY KEY,
+    maintenanceDate DATE NOT NULL,
+    airplaneID CHAR(6) NOT NULL,
+    partID CHAR(6) NOT NULL,
+    FOREIGN KEY (airplaneID) REFERENCES Airplane(airplaneID),
+    FOREIGN KEY (partID) REFERENCES Part(partID)
+);
+
+CREATE TABLE Purchase (
+    purchaseID CHAR(6) PRIMARY KEY,
+    quantity NUMBER(2) NOT NULL,
+    itemID CHAR(6) NOT NULL,
+    bookingID CHAR(6) NOT NULL,
+    passengerID CHAR(6) NOT NULL,
+    FOREIGN KEY (ItemID) REFERENCES Item(itemID),
+    FOREIGN KEY (BookingID) REFERENCES Booking(bookingID),
+    FOREIGN KEY (PassengerID) REFERENCES Passenger(passengerID)
+);
+
+CREATE TABLE BookingDetails (
+    bookingID CHAR(6) NOT NULL,
+    passengerID CHAR(6) NOT NULL,
+    wayID CHAR(3) NOT NULL,
+    price NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
+    status VARCHAR(10),
+    flightScheduleID CHAR(6),
+    seatID CHAR(3),
+    purchaseID CHAR (6),
+    policyID CHAR(6),
+    PRIMARY KEY (bookingID, passengerID,wayID),
+    FOREIGN KEY (bookingID) REFERENCES Booking(bookingID),
+    FOREIGN KEY (passengerID) REFERENCES Passenger(passengerID),
+    FOREIGN KEY (flightScheduleID) REFERENCES FlightSchedule(flightScheduleID),
+    FOREIGN KEY (seatID) REFERENCES Seat(seatID),
+    FOREIGN KEY (purchaseID) REFERENCES Purchase(purchaseID),
+    FOREIGN KEY (policyID) REFERENCES Policy(policyID)
 );
 
 ALTER SESSION SET NLS_DATE_FORMAT='DD-MM-YYYY';
