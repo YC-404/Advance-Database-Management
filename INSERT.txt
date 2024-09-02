@@ -1,0 +1,297 @@
+--INSERT MEMBER
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Rycca Basham','rbasham0@google.nl','0185748296');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Leah Freyne','lfreyne1@blogger.com','0175365554');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Madlin Weld','mweld2@mtv.com','0167072252');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Faye Stevings','fstevings3@nasa.gov','0115615336');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Marline Crosham','mcrosham4@europa.eu','0185271063');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Tobi Goymer','tgoymer5@biglobe.ne.jp','0193750234');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Shir Adamou','sadamou6@theglobeandmail.com','0125593498');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Blake Kitcatt','bkitcatt7@slate.com','0123150672');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Minna Ferrick','mferrick8@shop-pro.jp','0147406365');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Kitty Fellis','kfellis9@de.vu','0131817893');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Irwinn Cyseley','icyseleya@goo.ne.jp','0102979230');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Fabe Creevy','fcreevyb@gnu.org','0143820710');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Beryle Swaby','bswabyc@angelfire.com','0169251541');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Rahal Osdet','rbosdetd@bravesites.com','0193449926');
+INSERT INTO Member (memberID, memberName, memberEmail, memberPhone) 
+VALUES ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'),'Roy Wycliffe','rwy@reference.com','0126204111');
+
+--INSERT PASSENGER
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Jaimie Cundict', 'N849681359', '03/12/1997', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Marie Staniland', 'L521813674', '20/02/1997', 'F');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Ebony Eakeley', 'J198405157', '09/03/1996', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Fidelity Porker', 'W690927298', '09/04/1999', 'F');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Hillary Ofen', 'D508168540', '14/06/2000', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Aubrie Parris', 'V452766508', '05/12/1999', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Rossy Scripture', 'P913175291', '20/06/1996', 'F');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Kitti Kaubisch', 'Y455063617', '06/05/1998', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Marris Le land', 'Q677267135', '04/02/1996', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Fitzgerald Connow', 'U117486526', '18/02/1996', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Hastie Dun', 'M037890512', '15/07/1999', 'F');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Elnar Gimblett', 'P521414512', '24/02/1996', 'F');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Obed Silverston', 'C337205449', '09/07/1998', 'F');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Alexis De Minico', 'Y612296878', '20/04/1997', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
+values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Solomon Darth', 'Z992403539', '02/11/1997', 'M');
+
+--INSERT TO DISCOUNT
+INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
+VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'YWGXKH',10,'21/12/2023');
+INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
+VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'OLTQCJ',15,'30/01/2024');
+INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
+VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'OFELAU',10,'16/04/2024');
+INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
+VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'JERFRA',20,'04/06/2024');
+INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
+VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'UPEYUW',30,'09/07/2024');
+INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
+VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'MWERMY',5,'18/10/2023');
+INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
+VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'UMEKRQ',10,'13/12/2023');
+INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
+VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'NBLHRQ',10,'10/05/2024');
+INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
+VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'TVVCCP',10,'27/10/2023');
+INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
+VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'BFEGQN',10,'02/01/2024');
+
+--INSERT AIRPLANE
+insert into Airplane (airplaneID, model, capacity) 
+values ('A90251', 'Boeing 747', 300);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A99200', 'Embraer E190', 200);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A43576', 'Cessna 172', 200);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A60262', 'Boeing 747', 300);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A03557', 'Embraer E190', 200);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A73203', 'Bombardier Global 6000', 300);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A26732', 'Airbus A380', 200);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A27100', 'Cessna 172', 200);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A03961', 'Cessna 172', 300);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A64078', 'Bombardier Global 6000', 300);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A48999', 'Embraer E190', 200);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A18742', 'Cessna 172', 300);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A71143', 'Bombardier Global 6000', 300);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A77619', 'Cessna 172', 200);
+insert into Airplane (airplaneID, model, capacity) 
+values ('A84157', 'Bombardier Global 6000', 200);
+
+--INSERT PART
+insert into Part (partID, partName) 
+values (757104, 'filter');
+insert into Part (partID, partName) 
+values (633670, 'motor');
+insert into Part (partID, partName) 
+values (613960, 'pump');
+insert into Part (partID, partName) 
+values (948380, 'pump');
+insert into Part (partID, partName) 
+values (460200, 'screw');
+insert into Part (partID, partName) 
+values (238510, 'motor');
+insert into Part (partID, partName) 
+values (81766, 'bolt');
+insert into Part (partID, partName) 
+values (343405, 'motor');
+insert into Part (partID, partName) 
+values (581786, 'pump');
+insert into Part (partID, partName) 
+values (642428, 'valve');
+insert into Part (partID, partName) 
+values (907880, 'motor');
+insert into Part (partID, partName) 
+values (208234, 'pump');
+insert into Part (partID, partName) 
+values (954511, 'nut');
+insert into Part (partID, partName) 
+values (312643, 'pump');
+insert into Part (partID, partName) 
+values (303843, 'hose');
+
+--INSERT INSURANCE
+insert into Insurance (insuranceID, insuranceName, description) 
+values (425726, 'Allstate', 'Liability insurance');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (625221, 'Progressive', 'Underinsured motorist coverage');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (290678, 'Nationwide', 'Liability insurance');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (463195, 'Progressive', 'Comprehensive coverage');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (245576, 'State Farm', 'Personal injury protection');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (540377, 'Allstate', 'Comprehensive coverage');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (706021, 'Allstate', 'Personal injury protection');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (990564, 'State Farm', 'Collision coverage');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (599017, 'Nationwide', 'Liability insurance');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (447821, 'Allstate', 'Underinsured motorist coverage');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (993076, 'Geico', 'Comprehensive coverage');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (293821, 'Progressive', 'Collision coverage');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (588638, 'Geico', 'Personal injury protection');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (553103, 'Geico', 'Personal injury protection');
+insert into Insurance (insuranceID, insuranceName, description) 
+values (31310, 'Nationwide', 'Underinsured motorist coverage');
+
+--INSERT ITEM
+insert into Item (itemID, itemName, itemPrice) 
+values ('I76545', 'headphones', '48.37');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I07030', 'magazine', '17.77');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I32679', 'headphones', '30.92');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I04634', 'snacks', '21.96');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I51422', 'snacks', '13.99');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I10769', 'headphones', '31.53');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I22050', 'magazine', '33.89');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I25900', 'blanket', '43.34');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I44953', 'magazine', '49.87');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I76098', 'blanket', '27.05');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I01532', 'snacks', '32.33');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I42592', 'magazine', '42.44');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I92920', 'water', '24.60');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I36191', 'headphones', '$22.21');
+insert into Item (itemID, itemName, itemPrice) 
+values ('I21283', 'snacks', '31.92');
+
+--INSERT BOOKING
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, '0'), '01/02/2024', NULL, 'M00001', 'D00001');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, '0'), '20/10/2023', NULL, 'M00002', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, '0'), '30/01/2024', NULL, 'M00003', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '21/10/2023', NULL, 'M00004', 'D00002');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '09/07/2024', NULL, 'M00005', 'D00003');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '04/04/2024', NULL, 'M00001', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '30/01/2024', NULL, 'M00002', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '03/08/2024', NULL, 'M00003', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '07/08/2024', NULL, 'M00004', 'D00004');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '25/05/2024', NULL, 'M00005', 'D00005');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/03/2024', NULL, 'M00001', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '01/09/2024', NULL, 'M00002', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '29/06/2024', NULL, 'M00003', 'D00006');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/11/2023', NULL, 'M00004', 'D00007');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '25/06/2024', NULL, 'M00005', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '10/06/2024', NULL, 'M00001', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '15/06/2024', NULL, 'M00002', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '26/12/2023', NULL, 'M00003', 'D00008');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '10/09/2023', NULL, 'M00004', 'D00009');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '16/12/2023', NULL, 'M00005', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '30/03/2024', NULL, 'M00001', 'D00010');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/08/2024', NULL, 'M00002', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/07/2024', NULL, 'M00003', 'D00001');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '23/02/2024', NULL, 'M00004', 'D00002');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '15/08/2024', NULL, 'M00005', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '22/03/2024', NULL, 'M00001', 'D00003');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '26/10/2023', NULL, 'M00002', 'D00004');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '25/08/2024', NULL, 'M00003', 'D00005');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '27/09/2023', NULL, 'M00004', 'D00006');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '08/06/2024', NULL, 'M00005', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '11/09/2023', NULL, 'M00001', 'D00007');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/04/2024', NULL, 'M00002', 'D00008');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/12/2023', NULL, 'M00003', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '09/09/2023', NULL, 'M00004', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/01/2024', NULL, 'M00005', 'D00009');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '30/04/2024', NULL, 'M00001', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '29/05/2024', NULL, 'M00002', 'D00010');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '20/08/2024', NULL, 'M00003', NULL);
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/09/2023', NULL, 'M00004', 'D00001');
+INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
+VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '16/05/2024', NULL, 'M00005', NULL);
+
+--INSERT BOOKING DETAILS
