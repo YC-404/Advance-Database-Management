@@ -181,36 +181,36 @@ insert into Insurance (insuranceID, insuranceName, description)
 values (31310, 'Nationwide', 'Underinsured motorist coverage');
 
 --INSERT ITEM
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '48.37');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '17.77');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '30.92');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '21.96');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '13.99');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '31.53');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '33.89');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'blanket', '43.34');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '49.87');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'blanket', '27.05');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '32.33');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '42.44');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'water', '24.60');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '$22.21');
-insert into Item (itemID, itemName, itemPrice) 
-values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '31.92');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '48.37', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '17.77', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '30.92', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '21.96', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '13.99', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '31.53', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '33.89', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'blanket', '43.34', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '49.87', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'blanket', '27.05', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '32.33', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '42.44', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'water', '24.60', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '$22.21', '100');
+insert into Item (itemID, itemName, itemPrice, itemSstock) 
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '31.92', '100');
 
 --INSERT STAFF
 insert into Item (staffID, staffName, staffPhone) 
