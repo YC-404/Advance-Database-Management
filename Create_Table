@@ -2,7 +2,7 @@ DROP TABLE BookingDetails;
 DROP TABLE Purchase;
 DROP TABLE Maintenance;
 DROP TABLE WorkAllocation;
-DROP TABLE Booking;
+DROP TABLE Booking;dd
 DROP TABLE Policy;
 DROP TABLE InsuranceClaim;
 DROP TABLE Seat;
