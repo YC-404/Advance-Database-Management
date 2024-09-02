@@ -399,146 +399,216 @@ insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID)
 values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00002', 'B00013', 'P00007');
 insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
 values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 2, 'I00006', 'B00011', 'P00011');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 8, 'I00014', 'B00014', 'P00003');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00007', 'B00001', 'P00009');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00004', 'B00011', 'P00009');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00007', 'B00006', 'P00010');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00015', 'B00015', 'P00005');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00008', 'B00004', 'P00002');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00005', 'B00004', 'P00004');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00005', 'B00009', 'P00001');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00003', 'B00013', 'P00007');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00011', 'B00001', 'P00004');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00004', 'B00009', 'P00010');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00006', 'B00007', 'P00010');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 2, 'I00012', 'B00008', 'P00007');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00012', 'B00012', 'P00013');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00006', 'B00006', 'P00014');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00005', 'B00010', 'P00013');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00011', 'B00003', 'P00010');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00010', 'B00012', 'P00014');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00002', 'B00009', 'P00014');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00001', 'B00011', 'P00009');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00015', 'B00002', 'P00014');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00005', 'B00004', 'P00004');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00007', 'B00004', 'P00005');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 8, 'I00002', 'B00011', 'P00011');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 8, 'I00001', 'B00011', 'P00012');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00008', 'B00006', 'P00005');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00011', 'B00007', 'P00015');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00015', 'B00012', 'P00008');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00012', 'B00006', 'P00015');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00005', 'B00014', 'P00012');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00006', 'B00005', 'P00003');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00013', 'B00015', 'P00013');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00003', 'B00010', 'P00015');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 8, 'I00010', 'B00004', 'P00012');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00013', 'B00004', 'P00007');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00010', 'B00009', 'P00008');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00008', 'B00002', 'P00008');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00004', 'B00015', 'P00002');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00006', 'B00009', 'P00005');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00011', 'B00009', 'P00014');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00002', 'B00005', 'P00001');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00004', 'B00009', 'P00002');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00008', 'B00008', 'P00008');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00014', 'B00012', 'P00013');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00015', 'B00007', 'P00015');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00006', 'B00007', 'P00011');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00013', 'B00011', 'P00004');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00006', 'B00014', 'P00012');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00012', 'B00008', 'P00006');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00009', 'B00008', 'P00013');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00011', 'B00015', 'P00015');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00005', 'B00007', 'P00014');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00008', 'B00009', 'P00004');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 2, 'I00008', 'B00004', 'P00003');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00008', 'B00011', 'P00008');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00001', 'B00008', 'P00007');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00003', 'B00004', 'P00014');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00005', 'B00011', 'P00007');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00002', 'B00012', 'P00011');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00015', 'B00009', 'P00011');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 2, 'I00013', 'B00004', 'P00013');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00008', 'B00015', 'P00015');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00010', 'B00005', 'P00012');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00014', 'B00013', 'P00008');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 2, 'I00007', 'B00003', 'P00012');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00005', 'B00012', 'P00005');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00007', 'B00008', 'P00013');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00007', 'B00012', 'P00001');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00014', 'B00007', 'P00015');
-insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00012', 'B00009', 'P00005');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 8, 'I00014', 'B00014', 'P00003');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00007', 'B00001', 'P00009');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00004', 'B00011', 'P00009');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00007', 'B00006', 'P00010');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00015', 'B00015', 'P00005');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00008', 'B00004', 'P00002');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00005', 'B00004', 'P00004');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00005', 'B00009', 'P00001');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00003', 'B00013', 'P00007');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00011', 'B00001', 'P00004');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00004', 'B00009', 'P00010');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00006', 'B00007', 'P00010');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 2, 'I00012', 'B00008', 'P00007');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00012', 'B00012', 'P00013');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00006', 'B00006', 'P00014');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00005', 'B00010', 'P00013');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00011', 'B00003', 'P00010');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00010', 'B00012', 'P00014');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00002', 'B00009', 'P00014');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00001', 'B00011', 'P00009');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00015', 'B00002', 'P00014');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00005', 'B00004', 'P00004');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00007', 'B00004', 'P00005');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 8, 'I00002', 'B00011', 'P00011');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 8, 'I00001', 'B00011', 'P00012');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00008', 'B00006', 'P00005');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00011', 'B00007', 'P00015');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00015', 'B00012', 'P00008');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00012', 'B00006', 'P00015');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00005', 'B00014', 'P00012');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00006', 'B00005', 'P00003');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00013', 'B00015', 'P00013');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00003', 'B00010', 'P00015');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 8, 'I00010', 'B00004', 'P00012');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00013', 'B00004', 'P00007');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00010', 'B00009', 'P00008');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00008', 'B00002', 'P00008');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00004', 'B00015', 'P00002');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00006', 'B00009', 'P00005');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00011', 'B00009', 'P00014');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00002', 'B00005', 'P00001');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00004', 'B00009', 'P00002');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00008', 'B00008', 'P00008');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00014', 'B00012', 'P00013');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00015', 'B00007', 'P00015');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00006', 'B00007', 'P00011');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00013', 'B00011', 'P00004');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00006', 'B00014', 'P00012');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00012', 'B00008', 'P00006');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00009', 'B00008', 'P00013');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00011', 'B00015', 'P00015');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00005', 'B00007', 'P00014');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00008', 'B00009', 'P00004');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 2, 'I00008', 'B00004', 'P00003');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 10, 'I00008', 'B00011', 'P00008');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00001', 'B00008', 'P00007');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00003', 'B00004', 'P00014');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00005', 'B00011', 'P00007');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00002', 'B00012', 'P00011');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00015', 'B00009', 'P00011');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 2, 'I00013', 'B00004', 'P00013');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00008', 'B00015', 'P00015');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 9, 'I00010', 'B00005', 'P00012');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00014', 'B00013', 'P00008');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 2, 'I00007', 'B00003', 'P00012');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 1, 'I00005', 'B00012', 'P00005');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 4, 'I00007', 'B00008', 'P00013');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 5, 'I00007', 'B00012', 'P00001');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 3, 'I00014', 'B00007', 'P00015');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 6, 'I00012', 'B00009', 'P00005');
 
 --INSERT MAINTENANCE
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '22/11/2023', 'A43576', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '27/04/2024', 'A77619', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '28/05/2024', 'A90251', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '26/09/2023', 'A48999', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '07/03/2024', 'A90251', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '18/03/2024', 'A26732', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '11/07/2024', 'A60262', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '27/08/2024', 'A77619', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '28/05/2024', 'A99200', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '26/02/2024', 'A26732', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '02/08/2024', 'A03961', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '12/04/2024', 'A90251', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '27/04/2024', 'A73203', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '31/08/2024', 'A99200', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '11/06/2024', 'A43576', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '20/09/2023', 'A03961', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '09/08/2024', 'A71143', 460200);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '29/10/2023', 'A48999', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '15/10/2023', 'A84157', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '14/10/2023', 'A03557', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '31/08/2024', 'A48999', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '20/11/2023', 'A43576', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '15/01/2024', 'A43576', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '18/08/2024', 'A60262', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '01/10/2023', 'A26732', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '23/11/2023', 'A73203', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '07/05/2024', 'A27100', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '18/12/2023', 'A90251', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '24/11/2023', 'A27100', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '30/03/2024', 'A03557', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '30/12/2023', 'A99200', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '20/08/2024', 'A99200', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '13/12/2023', 'A90251', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '23/10/2023', 'A73203', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '25/09/2023', 'A90251', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '21/04/2024', 'A48999', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '01/08/2024', 'A60262', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '21/03/2024', 'A71143', 460200);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '03/05/2024', 'A84157', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '17/12/2023', 'A48999', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '26/05/2024', 'A71143', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '22/01/2024', 'A60262', 460200);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '22/03/2024', 'A27100', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '18/06/2024', 'A03961', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '21/10/2023', 'A26732', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '11/04/2024', 'A73203', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '13/09/2023', 'A99200', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '15/09/2023', 'A64078', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '02/02/2024', 'A84157', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '28/08/2024', 'A71143', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '06/09/2023', 'A48999', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '11/02/2024', 'A48999', 460200);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '21/08/2024', 'A03961', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '23/08/2024', 'A43576', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '19/07/2024', 'A99200', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '05/09/2023', 'A03557', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '31/10/2023', 'A03961', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '11/10/2023', 'A90251', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '25/01/2024', 'A60262', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '16/03/2024', 'A18742', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '05/02/2024', 'A03961', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '16/02/2024', 'A03557', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '12/07/2024', 'A03961', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '23/12/2023', 'A90251', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '26/09/2023', 'A73203', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '14/06/2024', 'A26732', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '15/06/2024', 'A60262', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '27/03/2024', 'A18742', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '08/04/2024', 'A26732', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values (null, '09/12/2023', 'A71143', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '22/11/2023', 'A43576', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '27/04/2024', 'A77619', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '28/05/2024', 'A90251', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '26/09/2023', 'A48999', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '07/03/2024', 'A90251', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '18/03/2024', 'A26732', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '11/07/2024', 'A60262', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '27/08/2024', 'A77619', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '28/05/2024', 'A99200', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '26/02/2024', 'A26732', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '02/08/2024', 'A03961', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '12/04/2024', 'A90251', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '27/04/2024', 'A73203', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '31/08/2024', 'A99200', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '11/06/2024', 'A43576', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '20/09/2023', 'A03961', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '09/08/2024', 'A71143', 460200);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '29/10/2023', 'A48999', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '15/10/2023', 'A84157', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '14/10/2023', 'A03557', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '31/08/2024', 'A48999', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '20/11/2023', 'A43576', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '15/01/2024', 'A43576', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '18/08/2024', 'A60262', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '01/10/2023', 'A26732', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '23/11/2023', 'A73203', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '07/05/2024', 'A27100', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '18/12/2023', 'A90251', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '24/11/2023', 'A27100', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '30/03/2024', 'A03557', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '30/12/2023', 'A99200', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '20/08/2024', 'A99200', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '13/12/2023', 'A90251', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '23/10/2023', 'A73203', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '25/09/2023', 'A90251', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '21/04/2024', 'A48999', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '01/08/2024', 'A60262', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '21/03/2024', 'A71143', 460200);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '03/05/2024', 'A84157', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '17/12/2023', 'A48999', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '26/05/2024', 'A71143', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '22/01/2024', 'A60262', 460200);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '22/03/2024', 'A27100', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '18/06/2024', 'A03961', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '21/10/2023', 'A26732', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '11/04/2024', 'A73203', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '13/09/2023', 'A99200', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '15/09/2023', 'A64078', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '02/02/2024', 'A84157', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '28/08/2024', 'A71143', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '06/09/2023', 'A48999', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '11/02/2024', 'A48999', 460200);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '21/08/2024', 'A03961', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '23/08/2024', 'A43576', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '19/07/2024', 'A99200', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '05/09/2023', 'A03557', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '31/10/2023', 'A03961', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '11/10/2023', 'A90251', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '25/01/2024', 'A60262', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '16/03/2024', 'A18742', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '05/02/2024', 'A03961', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '16/02/2024', 'A03557', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '12/07/2024', 'A03961', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '23/12/2023', 'A90251', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '26/09/2023', 'A73203', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '14/06/2024', 'A26732', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '15/06/2024', 'A60262', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '27/03/2024', 'A18742', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '08/04/2024', 'A26732', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), '09/12/2023', 'A71143', 907880);
 --INSERT BOOKING DETAILS
