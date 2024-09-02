@@ -86,7 +86,7 @@ CREATE TABLE FlightSchedule (
     departureTime TIMESTAMP NOT NULL,
     arrivalTime TIMESTAMP NOT NULL,
     origin VARCHAR(20) NOT NULL,
-    destination VARCHAR(20) NOT NULL,
+    destination VARCHAR(30) NOT NULL,
     airplaneID CHAR(6) NOT NULL,
     FOREIGN KEY (airplaneID) REFERENCES Airplane(airplaneID)
 );
