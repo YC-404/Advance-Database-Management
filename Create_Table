@@ -144,7 +144,7 @@ CREATE TABLE Maintenance (
 );
 
 CREATE TABLE Purchase (
-    purchaseID CHAR(6) PRIMARY KEY,
+    purchaseID CHAR(7) PRIMARY KEY,
     quantity NUMBER(2) NOT NULL,
     itemID CHAR(6) NOT NULL,
     bookingID CHAR(6) NOT NULL,
