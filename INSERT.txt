@@ -295,3 +295,4 @@ INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID)
 VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '16/05/2024', NULL, 'M00005', NULL);
 
 --INSERT BOOKING DETAILS
+ddd
