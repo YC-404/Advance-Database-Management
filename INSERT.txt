@@ -326,4 +326,36 @@ VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/09/2023', NULL, 'M0
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
 VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '16/05/2024', NULL, 'M00005', NULL);
 
+--INSERT PURCHASE
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 177, 'I00006', 'B00015', 'P00003');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 696, 'I00005', 'B00015', 'P00001');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 818, 'I00003', 'B00013', 'P00007');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 759, 'I00007', 'B00001', 'P00008');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 467, 'I00008', 'B00002', 'P00010');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 408, 'I00015', 'B00011', 'P00003');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 204, 'I00003', 'B00003', 'P00012');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 537, 'I00005', 'B00007', 'P00014');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 129, 'I00009', 'B00002', 'P00006');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 949, 'I00012', 'B00008', 'P00008');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 52, 'I00011', 'B00015', 'P00006');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 553, 'I00010', 'B00004', 'P00002');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 756, 'I00004', 'B00004', 'P00005');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 98, 'I00013', 'B00011', 'P00014');
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 369, 'I00002', 'B00011', 'P00005');
+
 --INSERT BOOKING DETAILS
