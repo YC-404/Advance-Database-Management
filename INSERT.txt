@@ -182,117 +182,148 @@ values (31310, 'Nationwide', 'Underinsured motorist coverage');
 
 --INSERT ITEM
 insert into Item (itemID, itemName, itemPrice) 
-values ('I76545', 'headphones', '48.37');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '48.37');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I07030', 'magazine', '17.77');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '17.77');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I32679', 'headphones', '30.92');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '30.92');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I04634', 'snacks', '21.96');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '21.96');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I51422', 'snacks', '13.99');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '13.99');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I10769', 'headphones', '31.53');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '31.53');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I22050', 'magazine', '33.89');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '33.89');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I25900', 'blanket', '43.34');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'blanket', '43.34');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I44953', 'magazine', '49.87');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '49.87');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I76098', 'blanket', '27.05');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'blanket', '27.05');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I01532', 'snacks', '32.33');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '32.33');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I42592', 'magazine', '42.44');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'magazine', '42.44');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I92920', 'water', '24.60');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'water', '24.60');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I36191', 'headphones', '$22.21');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'headphones', '$22.21');
 insert into Item (itemID, itemName, itemPrice) 
-values ('I21283', 'snacks', '31.92');
+values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '31.92');
+
+--INSERT STAFF
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Violetta Westberg', '0114301140');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Lotte Easey', '0181461564');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Stephannie Fanshawe', '0102920434');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kirbee Gawne', '0167396437');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Natka Zold', '0186192288');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Gale Jerratsch', '0122976644');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mahmoud Probey', '0147018692');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Edlin Scholey', '0157444443');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Claretta Claremont', '0189986682');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Hadley Donnan', '0131298712');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Enid Elphinston', '0190617301');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Loraine Eneas', '0160927925');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Rosie Coslitt', '0189908125');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Banky Angrave', '0110345279');
+insert into Item (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Shea Cleland', '0171397611');
 
 --INSERT BOOKING
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, '0'), '01/02/2024', NULL, 'M00001', 'D00001');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, '0'), '01/02/2024', NULL, 'M00001', 'D00001');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, '0'), '20/10/2023', NULL, 'M00002', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, '0'), '20/10/2023', NULL, 'M00002', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, '0'), '30/01/2024', NULL, 'M00003', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, '0'), '30/01/2024', NULL, 'M00003', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '21/10/2023', NULL, 'M00004', 'D00002');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '21/10/2023', NULL, 'M00004', 'D00002');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '09/07/2024', NULL, 'M00005', 'D00003');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '09/07/2024', NULL, 'M00005', 'D00003');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '04/04/2024', NULL, 'M00001', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '04/04/2024', NULL, 'M00001', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '30/01/2024', NULL, 'M00002', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '30/01/2024', NULL, 'M00002', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '03/08/2024', NULL, 'M00003', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '03/08/2024', NULL, 'M00003', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '07/08/2024', NULL, 'M00004', 'D00004');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '07/08/2024', NULL, 'M00004', 'D00004');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '25/05/2024', NULL, 'M00005', 'D00005');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '25/05/2024', NULL, 'M00005', 'D00005');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/03/2024', NULL, 'M00001', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/03/2024', NULL, 'M00001', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '01/09/2024', NULL, 'M00002', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '01/09/2024', NULL, 'M00002', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '29/06/2024', NULL, 'M00003', 'D00006');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '29/06/2024', NULL, 'M00003', 'D00006');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/11/2023', NULL, 'M00004', 'D00007');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/11/2023', NULL, 'M00004', 'D00007');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '25/06/2024', NULL, 'M00005', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '25/06/2024', NULL, 'M00005', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '10/06/2024', NULL, 'M00001', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '10/06/2024', NULL, 'M00001', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '15/06/2024', NULL, 'M00002', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '15/06/2024', NULL, 'M00002', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '26/12/2023', NULL, 'M00003', 'D00008');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '26/12/2023', NULL, 'M00003', 'D00008');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '10/09/2023', NULL, 'M00004', 'D00009');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '10/09/2023', NULL, 'M00004', 'D00009');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '16/12/2023', NULL, 'M00005', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '16/12/2023', NULL, 'M00005', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '30/03/2024', NULL, 'M00001', 'D00010');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '30/03/2024', NULL, 'M00001', 'D00010');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/08/2024', NULL, 'M00002', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/08/2024', NULL, 'M00002', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/07/2024', NULL, 'M00003', 'D00001');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/07/2024', NULL, 'M00003', 'D00001');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '23/02/2024', NULL, 'M00004', 'D00002');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '23/02/2024', NULL, 'M00004', 'D00002');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '15/08/2024', NULL, 'M00005', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '15/08/2024', NULL, 'M00005', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '22/03/2024', NULL, 'M00001', 'D00003');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '22/03/2024', NULL, 'M00001', 'D00003');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '26/10/2023', NULL, 'M00002', 'D00004');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '26/10/2023', NULL, 'M00002', 'D00004');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '25/08/2024', NULL, 'M00003', 'D00005');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '25/08/2024', NULL, 'M00003', 'D00005');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '27/09/2023', NULL, 'M00004', 'D00006');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '27/09/2023', NULL, 'M00004', 'D00006');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '08/06/2024', NULL, 'M00005', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '08/06/2024', NULL, 'M00005', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '11/09/2023', NULL, 'M00001', 'D00007');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '11/09/2023', NULL, 'M00001', 'D00007');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/04/2024', NULL, 'M00002', 'D00008');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/04/2024', NULL, 'M00002', 'D00008');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/12/2023', NULL, 'M00003', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/12/2023', NULL, 'M00003', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '09/09/2023', NULL, 'M00004', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '09/09/2023', NULL, 'M00004', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/01/2024', NULL, 'M00005', 'D00009');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '18/01/2024', NULL, 'M00005', 'D00009');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '30/04/2024', NULL, 'M00001', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '30/04/2024', NULL, 'M00001', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '29/05/2024', NULL, 'M00002', 'D00010');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '29/05/2024', NULL, 'M00002', 'D00010');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '20/08/2024', NULL, 'M00003', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '20/08/2024', NULL, 'M00003', NULL);
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/09/2023', NULL, 'M00004', 'D00001');
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '12/09/2023', NULL, 'M00004', 'D00001');
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
-VALUES (‘B’ || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '16/05/2024', NULL, 'M00005', NULL);
+VALUES ('B' || LPAD(booking_id_seq.NEXTVAL, 5, ‘0’), '16/05/2024', NULL, 'M00005', NULL);
 
 --INSERT BOOKING DETAILS
-ddd
