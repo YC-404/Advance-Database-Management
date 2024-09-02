@@ -3,7 +3,7 @@ CREATE TABLE Member (
     MemberName VARCHAR2(30) NOT NULL,
     MemberEmail VARCHAR2(30),
     MemberPhone VARCHAR2(11) NOT NULL,
-    CONSTRAINT chk_Member_Phone CHECK (REGEXP_LIKE(MemberPhone, '^[0-9]{11}$')),
+    CONSTRAINT chk_Member_Phone CHECK (REGEXP_LIKE(MemberPhone, '^01[0-9]{8}$')),
     CONSTRAINT chk_Member_Email CHECK (REGEXP_LIKE(MemberEmail, '^[^@]+@[^@]+\.[^@]+$'))
 );
 
@@ -20,7 +20,7 @@ CREATE TABLE Booking (
 CREATE TABLE Discount (
     DiscountID CHAR(6) PRIMARY KEY,
     DiscountCode CHAR(6) NOT NULL,
-    DiscountRate NUMBER(2)DEFAULT 0.0 NOT NULL,
+    DiscountRate NUMBER(2) DEFAULT 0.0 NOT NULL,
     ExpiryDate DATE NOT NULL
 );
 
@@ -116,7 +116,8 @@ CREATE TABLE Purchase (
     BookingID CHAR(6) NOT NULL,
     PassengerID CHAR(6) NOT NULL,
     FOREIGN KEY (ItemID) REFERENCES Item(ItemID),
-    FOREIGN KEY (BookingID, PassengerID) REFERENCES BookingDetails(BookingID, PassengerID)
+    FOREIGN KEY (BookingID) REFERENCES Booking(BookingID),
+    FOREIGN KEY (PassengerID) REFERENCES Passenger(PassengerID)
 );
 
 CREATE TABLE Item (
@@ -138,7 +139,7 @@ CREATE TABLE Staff (
     Name VARCHAR2(30) NOT NULL,
     Role VARCHAR2(10) NOT NULL,
     StaffPhone VARCHAR2(11) NOT NULL,
-    CONSTRAINT chk_Staff_Phone CHECK (REGEXP_LIKE(StaffPhone, '^[0-9]{11}$'))
+    CONSTRAINT chk_Staff_Phone CHECK (REGEXP_LIKE(StaffPhone, '^01[0-9]{8}$'))
 );
 
 CREATE TABLE Maintenance (
