@@ -66,7 +66,7 @@ CREATE TABLE Item (
 
 CREATE TABLE Staff (
     staffID CHAR(6) PRIMARY KEY,
-    name VARCHAR(30) NOT NULL,
+    staffName VARCHAR(30) NOT NULL,
     role VARCHAR(10) NOT NULL,
     staffPhone VARCHAR(11) NOT NULL,
     CONSTRAINT chk_Staff_Phone CHECK (REGEXP_LIKE(staffPhone, '^01[0-9]{8}$'))
@@ -82,7 +82,6 @@ CREATE TABLE Luggage (
 
 CREATE TABLE FlightSchedule (
     flightScheduleID CHAR(6) PRIMARY KEY,
-    flightNumber VARCHAR(20) NOT NULL,
     flightDate DATE NOT NULL,
     departureTime TIMESTAMP NOT NULL,
     arrivalTime TIMESTAMP NOT NULL,
