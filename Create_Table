@@ -173,7 +173,7 @@ CREATE TABLE BookingDetails (
     airplaneID CHAR(7) NOT NULL,
     purchaseID CHAR(7),
     policyID CHAR(7) NOT NULL,
-    PRIMARY KEY (bookingID, passengerID, wayID),
+    PRIMARY KEY (bookingdetailsID, bookingID, passengerID, wayID),
     FOREIGN KEY (bookingID) REFERENCES Booking(bookingID),
     FOREIGN KEY (passengerID) REFERENCES Passenger(passengerID),
     FOREIGN KEY (flightScheduleID) REFERENCES FlightSchedule(flightScheduleID),
