@@ -18,7 +18,7 @@ DROP TABLE Passenger;
 DROP TABLE Member;
 
 CREATE TABLE Member (
-    memberID CHAR(6) PRIMARY KEY,
+    memberID CHAR(7) PRIMARY KEY,
     memberName VARCHAR(30) NOT NULL,
     memberEmail VARCHAR(30),
     memberPhone VARCHAR(11) NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE Member (
 );
 
 CREATE TABLE Passenger (
-    passengerID CHAR(6) PRIMARY KEY,
+    passengerID CHAR(7) PRIMARY KEY,
     passengerName VARCHAR(30) NOT NULL,
     passportNumber VARCHAR(10) NOT NULL,
     dOB DATE NOT NULL,
@@ -35,14 +35,14 @@ CREATE TABLE Passenger (
 );
 
 CREATE TABLE Discount (
-    discountID CHAR(6) PRIMARY KEY,
-    discountCode CHAR(6) NOT NULL,
+    discountID CHAR(7) PRIMARY KEY,
+    discountCode CHAR(7) NOT NULL,
     discountRate NUMBER(2) DEFAULT 0.0 NOT NULL,
     expiryDate DATE NOT NULL
 );
 
 CREATE TABLE Airplane (
-    airplaneID CHAR(6) PRIMARY KEY,
+    airplaneID CHAR(7) PRIMARY KEY,
     model VARCHAR(30) NOT NULL,
     capacity NUMBER(3) NOT NULL,
     planeStatus VARCHAR(10) NOT NULL,
@@ -50,25 +50,25 @@ CREATE TABLE Airplane (
 );
 
 CREATE TABLE Part (
-    partID CHAR(6) PRIMARY KEY,
+    partID CHAR(7) PRIMARY KEY,
     partName VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE Insurance (
-    insuranceID CHAR(6) PRIMARY KEY,
+    insuranceID CHAR(7) PRIMARY KEY,
     insuranceName VARCHAR(30) NOT NULL,
     description VARCHAR(30) NOT NULL
 );
 
 CREATE TABLE Item (
-    itemID CHAR(6) PRIMARY KEY,
+    itemID CHAR(7) PRIMARY KEY,
     itemName VARCHAR(100) NOT NULL,
     itemPrice NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
     itemStock NUMBER(3) NOT NULL
 );
 
 CREATE TABLE Staff (
-    staffID CHAR(6) PRIMARY KEY,
+    staffID CHAR(7) PRIMARY KEY,
     staffName VARCHAR(30) NOT NULL,
     role VARCHAR(20) NOT NULL,
     staffPhone VARCHAR(11) NOT NULL,
@@ -84,15 +84,14 @@ CREATE TABLE FlightSchedule (
     arrivalTime VARCHAR(10) NOT NULL,
     origin VARCHAR(20) NOT NULL,
     destination VARCHAR(20) NOT NULL,
-    airplaneID CHAR(6) NOT NULL,
+    airplaneID CHAR(7) NOT NULL,
     FOREIGN KEY (airplaneID) REFERENCES Airplane(airplaneID)
 );
 
 CREATE TABLE Seat (
-    seatNumber CHAR(3) NOT NULL,
+    seatNumber NUMBER(2) NOT NULL,
     class VARCHAR(20) NOT NULL,
-    seatPrice NUMBER(10,2) NOT NULL,
-    airplaneID CHAR(6) NOT NULL,
+    airplaneID CHAR(7) NOT NULL,
     PRIMARY KEY (seatNumber, airplaneID),
     FOREIGN KEY (airplaneID) REFERENCES Airplane(airplaneID)
 );
@@ -100,38 +99,38 @@ CREATE TABLE Seat (
 CREATE TABLE Policy (
     policyID CHAR(7) PRIMARY KEY,
     coverageAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
-    insuranceID CHAR(6) NOT NULL,
+    insuranceID CHAR(7) NOT NULL,
     FOREIGN KEY (insuranceID) REFERENCES Insurance(insuranceID)
 );
 
 CREATE TABLE InsuranceClaim (
-    claimID CHAR(6) PRIMARY KEY,
+    claimID CHAR(7) PRIMARY KEY,
     claimDate DATE NOT NULL,
     claimAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
-    policyID CHAR(6),
+    policyID CHAR(7),
     FOREIGN KEY (policyID) REFERENCES Policy(policyID)
 );
 
 CREATE TABLE Booking (
-    bookingID CHAR(6) PRIMARY KEY,
+    bookingID CHAR(7) PRIMARY KEY,
     bookingDate DATE NOT NULL,
     totalAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
-    memberID CHAR(6) NOT NULL,
-    discountID CHAR(6),
+    memberID CHAR(7) NOT NULL,
+    discountID CHAR(7),
     FOREIGN KEY (memberID) REFERENCES Member(memberID),
     FOREIGN KEY (discountID) REFERENCES Discount(discountID)
 );
 
 CREATE TABLE Luggage (
-    luggageID CHAR(6) PRIMARY KEY,
+    luggageID CHAR(7) PRIMARY KEY,
     weight NUMBER(5, 2) NOT NULL,
-    bookingID CHAR(6) NOT NULL,
+    bookingID CHAR(7) NOT NULL,
     FOREIGN KEY (bookingID) REFERENCES Booking(bookingID)
 );
 
 CREATE TABLE WorkAllocation (
     allocationID CHAR(7) PRIMARY KEY,
-    staffID CHAR(6) NOT NULL,
+    staffID CHAR(7) NOT NULL,
     flightScheduleID CHAR(7) NOT NULL,
     FOREIGN KEY (staffID) REFERENCES Staff(staffID),
     FOREIGN KEY (flightScheduleID) REFERENCES FlightSchedule(flightScheduleID)
@@ -140,8 +139,8 @@ CREATE TABLE WorkAllocation (
 CREATE TABLE Maintenance (
     maintenanceID CHAR(7) PRIMARY KEY,
     maintenanceDate DATE NOT NULL,
-    airplaneID CHAR(6) NOT NULL,
-    partID CHAR(6) NOT NULL,
+    airplaneID CHAR(7) NOT NULL,
+    partID CHAR(7) NOT NULL,
     FOREIGN KEY (airplaneID) REFERENCES Airplane(airplaneID),
     FOREIGN KEY (partID) REFERENCES Part(partID)
 );
@@ -149,25 +148,25 @@ CREATE TABLE Maintenance (
 CREATE TABLE Purchase (
     purchaseID CHAR(7) PRIMARY KEY,
     quantity NUMBER(2) NOT NULL,
-    itemID CHAR(6) NOT NULL,
-    bookingID CHAR(6) NOT NULL,
-    passengerID CHAR(6) NOT NULL,
+    itemID CHAR(7) NOT NULL,
+    bookingID CHAR(7) NOT NULL,
+    passengerID CHAR(7) NOT NULL,
     FOREIGN KEY (ItemID) REFERENCES Item(itemID),
     FOREIGN KEY (BookingID) REFERENCES Booking(bookingID),
     FOREIGN KEY (PassengerID) REFERENCES Passenger(passengerID)
 );
 
 CREATE TABLE BookingDetails (
-    bookingID CHAR(6) NOT NULL,
-    passengerID CHAR(6) NOT NULL,
+    bookingID CHAR(7) NOT NULL,
+    passengerID CHAR(7) NOT NULL,
     wayID CHAR(3) NOT NULL,
     price NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
     status VARCHAR(15) NOT NULL,
-    flightScheduleID CHAR(6),
-    seatNumber CHAR(3) NOT NULL,
-    airplaneID CHAR(6) NOT NULL,
-    purchaseID CHAR(6),
-    policyID CHAR(6) NOT NULL,
+    flightScheduleID CHAR(7),
+    seatNumber NUMBER(2) NOT NULL,
+    airplaneID CHAR(7) NOT NULL,
+    purchaseID CHAR(7),
+    policyID CHAR(7) NOT NULL,
     PRIMARY KEY (bookingID, passengerID, wayID),
     FOREIGN KEY (bookingID) REFERENCES Booking(bookingID),
     FOREIGN KEY (passengerID) REFERENCES Passenger(passengerID),
