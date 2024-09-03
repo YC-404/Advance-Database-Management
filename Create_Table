@@ -128,7 +128,7 @@ CREATE TABLE Booking (
 CREATE TABLE WorkAllocation (
     allocationID CHAR(7) PRIMARY KEY,
     staffID CHAR(6) NOT NULL,
-    flightScheduleID CHAR(6) NOT NULL,
+    flightScheduleID CHAR(7) NOT NULL,
     FOREIGN KEY (staffID) REFERENCES Staff(staffID),
     FOREIGN KEY (flightScheduleID) REFERENCES FlightSchedule(flightScheduleID)
 );
