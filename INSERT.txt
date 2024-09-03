@@ -62,7 +62,7 @@ values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Alexis De Minico', 'Y612
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Solomon Darth', 'Z992403539', '02/11/1997', 'M');
 
---INSERT TO DISCOUNT
+--INSERT DISCOUNT
 INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
 VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'YWGXKH',10,'21/12/2023');
 INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate) 
