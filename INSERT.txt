@@ -85,36 +85,36 @@ INSERT INTO Discount (discountID, discountCode, discountRate, expiryDate)
 VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'BFEGQN',10,'02/01/2024');
 
 --INSERT AIRPLANE
-insert into Airplane (airplaneID, model, capacity) 
-values ('A90251', 'Fairchild-Dornier 328JET', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A99200', 'Fairchild-Dornier 328JET', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A43576', 'Fairchild-Dornier 328JET', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A60262', 'Fairchild-Dornier 328JET', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A03557', 'Fairchild-Dornier 328JET', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A73203', 'Fairchild-Dornier 328JET', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A26732', 'Fairchild-Dornier 328JET', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A27100', 'Fairchild-Dornier 328JET', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A03961', 'Embraer ERJ-135', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A64078', 'Embraer ERJ-135', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A48999', 'Embraer ERJ-135', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A18742', 'Embraer ERJ-135', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A71143', 'Embraer ERJ-135', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A77619', 'Embraer ERJ-135', 30);
-insert into Airplane (airplaneID, model, capacity) 
-values ('A84157', 'Embraer ERJ-135', 30);
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A90251', 'Fairchild-Dornier 328JET', 30, 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A99200', 'Fairchild-Dornier 328JET', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A43576', 'Fairchild-Dornier 328JET', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A60262', 'Fairchild-Dornier 328JET', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A03557', 'Fairchild-Dornier 328JET', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A73203', 'Fairchild-Dornier 328JET', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A26732', 'Fairchild-Dornier 328JET', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A27100', 'Fairchild-Dornier 328JET', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A03961', 'Embraer ERJ-135', 30 'Available');
+insert into Airplane (airplaneID, model, capacity),planeStatus)  
+values ('A64078', 'Embraer ERJ-135', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A48999', 'Embraer ERJ-135', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A18742', 'Embraer ERJ-135', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A71143', 'Embraer ERJ-135', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A77619', 'Embraer ERJ-135', 30 'Available');
+insert into Airplane (airplaneID, model, capacity,planeStatus) 
+values ('A84157', 'Embraer ERJ-135', 30 'Available');
 
 --INSERT PART
 insert into Part (partID, partName) 
