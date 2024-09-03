@@ -1,21 +1,23 @@
 DROP TABLE BookingDetails;
 DROP TABLE WorkAllocation;
-DROP TABLE FlightSchedule;
-DROP TABLE Booking;
-DROP TABLE Seat;
 DROP TABLE Purchase;
+DROP TABLE Luggage;
+
 DROP TABLE Maintenance;
 DROP TABLE InsuranceClaim;
+DROP TABLE Booking;
+DROP TABLE Seat;
 DROP TABLE Policy;
-DROP TABLE Luggage;
+DROP TABLE FlightSchedule;
 DROP TABLE Staff;
-DROP TABLE Item;
-DROP TABLE Insurance;
-DROP TABLE Part;
-DROP TABLE Airplane;
-DROP TABLE Discount;
-DROP TABLE Passenger;
+
 DROP TABLE Member;
+DROP TABLE Passenger;
+DROP TABLE Discount;
+DROP TABLE Airplane;
+DROP TABLE Part;
+DROP TABLE Insurance;
+DROP TABLE Item;
 
 CREATE TABLE Member (
     memberID CHAR(7) PRIMARY KEY,
