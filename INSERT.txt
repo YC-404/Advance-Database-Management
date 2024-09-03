@@ -86,35 +86,35 @@ VALUES ('D' || LPAD(discount_id_seq.NEXTVAL, 5, '0'),'BFEGQN',10,'02/01/2024');
 
 --INSERT AIRPLANE
 insert into Airplane (airplaneID, model, capacity) 
-values ('A90251', 'Boeing 747', 300);
+values ('A90251', 'Fairchild-Dornier 328JET', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A99200', 'Embraer E190', 200);
+values ('A99200', 'Fairchild-Dornier 328JET', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A43576', 'Cessna 172', 200);
+values ('A43576', 'Fairchild-Dornier 328JET', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A60262', 'Boeing 747', 300);
+values ('A60262', 'Fairchild-Dornier 328JET', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A03557', 'Embraer E190', 200);
+values ('A03557', 'Fairchild-Dornier 328JET', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A73203', 'Bombardier Global 6000', 300);
+values ('A73203', 'Fairchild-Dornier 328JET', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A26732', 'Airbus A380', 200);
+values ('A26732', 'Fairchild-Dornier 328JET', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A27100', 'Cessna 172', 200);
+values ('A27100', 'Fairchild-Dornier 328JET', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A03961', 'Cessna 172', 300);
+values ('A03961', 'Embraer ERJ-135', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A64078', 'Bombardier Global 6000', 300);
+values ('A64078', 'Embraer ERJ-135', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A48999', 'Embraer E190', 200);
+values ('A48999', 'Embraer ERJ-135', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A18742', 'Cessna 172', 300);
+values ('A18742', 'Embraer ERJ-135', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A71143', 'Bombardier Global 6000', 300);
+values ('A71143', 'Embraer ERJ-135', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A77619', 'Cessna 172', 200);
+values ('A77619', 'Embraer ERJ-135', 30);
 insert into Airplane (airplaneID, model, capacity) 
-values ('A84157', 'Bombardier Global 6000', 200);
+values ('A84157', 'Embraer ERJ-135', 30);
 
 --INSERT PART
 insert into Part (partID, partName) 
