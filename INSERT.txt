@@ -213,36 +213,200 @@ insert into Item (itemID, itemName, itemPrice, itemSstock)
 values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '31.92', '100');
 
 --INSERT STAFF
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Violetta Westberg', '0114301140');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Lotte Easey', '0181461564');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Stephannie Fanshawe', '0102920434');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kirbee Gawne', '0167396437');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Natka Zold', '0186192288');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Gale Jerratsch', '0122976644');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mahmoud Probey', '0147018692');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Edlin Scholey', '0157444443');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Claretta Claremont', '0189986682');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Hadley Donnan', '0131298712');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Enid Elphinston', '0190617301');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Loraine Eneas', '0160927925');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Rosie Coslitt', '0189908125');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Banky Angrave', '0110345279');
-insert into Item (staffID, staffName, staffPhone) 
+insert into Staff (staffID, staffName, staffPhone) 
 values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Shea Cleland', '0171397611');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Brittany Mordue', '0135467890');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jared Lister', '0146765432');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Sage Egleton', '0158765432');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Dana Corser', '0169896543');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Raymund Woodgate', '0171987654');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kaya Dearing', '0183456789');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Carmen Aldin', '0123456789');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mindy Grose', '0192345678');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Arnold Rowland', '0156789123');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Linda Bricknell', '0145678901');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Blake Pullen', '0123987654');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Eli Copplestone', '0187654321');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Olivia Rountree', '0192837465');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ronin Childerhouse', '0123987653');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mya Lambe', '0198745623');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Zara Tansley', '0189374625');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Dale Legg', '0167483920');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Neve Dellar', '0158473920');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Shaun Grist', '0123847563');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Miles Bygrave', '0168374920');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ryleigh Coultous', '0173847509');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ayden Scrivens', '0192837456');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Elise Fenwick', '0123847562');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Demi Humphrey', '0183948576');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Evan Croucher', '0172839475');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Hollie Allcock', '0192837451');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Callum Hadden', '0183749502');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Georgia Allsopp', '0123948573');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Rian Ledwith', '0168472935');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Aubrey Tebbutt', '0173948502');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Imogen Wilber', '0193847592');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Maxim Pateman', '0123847591');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Zachary Dimbleby', '0183745920');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Brennan Court', '0143847592');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ashton Slade', '0172839573');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Leona Moxon', '0159384720');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Joey Twigg', '0183847592');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Rico Kimber', '0192837461');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Tiana Storrar', '0123847590');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Harris Watling', '0159384729');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Eden MacConnechy', '0173948503');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Nico Phipps', '0123847509');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Summer Trowell', '0193847502');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Robin Smither', '0167483921');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Macy Tebbutt', '0173948573');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ryder Cant', '0189374502');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Graham McKeand', '0193847501');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Roxie Nankivell', '0167483923');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Easton Cheyne', '0159374820');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Caden Binning', '0148492048');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kye Stockdale', '0157492048');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Milo McEwen', '0193748501');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Violet Cairns', '0148375948');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Laurie Millington', '0158375948');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Leon Abbott', '0192837501');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Flynn Magill', '0173847509');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Silas Dimmock', '0168492048');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Sienna Madigan', '0192837502');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Logan Hatfield', '0183749501');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Maddison Rothwell', '0178492048');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jaxon Moffatt', '0168492047');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Bodhi Hatfield', '0176492048');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Chase Crowther', '0183749204');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Zane Whalley', '0158492048');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Noah Collinson', '0148492058');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Oscar Ryley', '0158492058');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ruby Horsfield', '0193847503');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Harvey Vallance', '0183749503');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Emily Glyde', '0178492046');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Finn Martin', '0168492045');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Oliver Delacruz', '0158492049');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ella Nowak', '0148492059');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mason Alston', '0138492048');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ava Horton', '0128492059');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Lucas Winter', '0118492049');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Evelyn McGuire', '0138492059');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jackson Marshall', '0148492060');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Zoe Cameron', '0158492060');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Hudson Sharp', '0168492061');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Liam Middleton', '0178492062');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Sophia Hudson', '0188492062');
+insert into Staff (staffID, staffName, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mia Walton', '0198492063');
 
 --INSERT BOOKING
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
