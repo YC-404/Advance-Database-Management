@@ -3651,7 +3651,7 @@ insert into insuranceClaim (claimID, claimDate, claimAmount, policyID) values ('
 insert into insuranceClaim (claimID, claimDate, claimAmount, policyID) values ('CL' || LPAD(insuranceclaim_id_seq.NEXTVAL, 5, '0'), '4/25/2023', 1045, 'PO00118');
 insert into insuranceClaim (claimID, claimDate, claimAmount, policyID) values ('CL' || LPAD(insuranceclaim_id_seq.NEXTVAL, 5, '0'), '4/24/2023', 1108, 'PO00019');
 insert into insuranceClaim (claimID, claimDate, claimAmount, policyID) values ('CL' || LPAD(insuranceclaim_id_seq.NEXTVAL, 5, '0'), '5/21/2023', 1717, 'PO00090');
-insert into insuranceClaim (claimID, claimDate, claimAmount, policyID) values ('CL' || LPAD(insuranceclaim_id_seq.NEXTVAL, 5, '0'), '8/27/2022', 1'PO00097');
+insert into insuranceClaim (claimID, claimDate, claimAmount, policyID) values ('CL' || LPAD(insuranceclaim_id_seq.NEXTVAL, 5, '0'), '8/27/2022', 1, 'PO00097');
 insert into insuranceClaim (claimID, claimDate, claimAmount, policyID) values ('CL' || LPAD(insuranceclaim_id_seq.NEXTVAL, 5, '0'), '7/24/2024', 1209, 'PO00064');
 insert into insuranceClaim (claimID, claimDate, claimAmount, policyID) values ('CL' || LPAD(insuranceclaim_id_seq.NEXTVAL, 5, '0'), '3/4/2023', 1545, 'PO00136');
 insert into insuranceClaim (claimID, claimDate, claimAmount, policyID) values ('CL' || LPAD(insuranceclaim_id_seq.NEXTVAL, 5, '0'), '1/28/2023', 1518, 'PO00105');
