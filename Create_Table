@@ -89,7 +89,7 @@ CREATE TABLE FlightSchedule (
 CREATE TABLE Seat (
     seatNumber CHAR(3) NOT NULL,
     class VARCHAR(20) NOT NULL,
-    price NUMNER(10,2) NOT NULL,
+    seatPrice NUMBER(10,2) NOT NULL,
     airplaneID CHAR(6) NOT NULL,
     PRIMARY KEY (seatNumber, airplaneID),
     FOREIGN KEY (airplaneID) REFERENCES Airplane(airplaneID)
