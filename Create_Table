@@ -19,10 +19,12 @@ DROP TABLE Part;
 DROP TABLE Insurance;
 DROP TABLE Item;
 
+ALTER SESSION SET NLS_DATE_FORMAT='DD/MM/YYYY';
+
 CREATE TABLE Member (
     memberID CHAR(7) PRIMARY KEY,
     memberName VARCHAR(30) NOT NULL,
-    memberEmail VARCHAR(30),
+    memberEmail VARCHAR(30) NOT NULL,
     memberPhone VARCHAR(11) NOT NULL,
     CONSTRAINT chk_Member_Phone CHECK (REGEXP_LIKE(memberPhone, '^01[0-9]{8}$')),
     CONSTRAINT chk_Member_Email CHECK (REGEXP_LIKE(memberEmail, '^[^@]+@[^@]+\.[^@]+$'))
@@ -33,7 +35,8 @@ CREATE TABLE Passenger (
     passengerName VARCHAR(30) NOT NULL,
     passportNumber VARCHAR(10) NOT NULL,
     dOB DATE NOT NULL,
-    gender CHAR(1) NOT NULL
+    gender CHAR(1) NOT NULL,
+    CONSTRAINT chk_gender CHECK (gender IN ('M', 'F'))
 );
 
 CREATE TABLE Discount (
@@ -74,8 +77,8 @@ CREATE TABLE Staff (
     staffName VARCHAR(30) NOT NULL,
     role VARCHAR(20) NOT NULL,
     staffPhone VARCHAR(11) NOT NULL,
-    staffEmail VARCHAR(30),
-    CONSTRAINT chk_Staff_Phone CHECK (REGEXP_LIKE(staffPhone, '^01[0-9]{8}$'))
+    staffEmail VARCHAR(30) NOT NULL,
+    CONSTRAINT chk_Staff_Phone CHECK (REGEXP_LIKE(staffPhone, '^01[0-9]{8}$')),
     CONSTRAINT chk_Staff_Email CHECK (REGEXP_LIKE(staffEmail, '^[^@]+@[^@]+\.[^@]+$'))
 );
 
@@ -109,7 +112,7 @@ CREATE TABLE InsuranceClaim (
     claimID CHAR(7) PRIMARY KEY,
     claimDate DATE NOT NULL,
     claimAmount NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
-    policyID CHAR(7),
+    policyID CHAR(7) NOT NULL,
     FOREIGN KEY (policyID) REFERENCES Policy(policyID)
 );
 
@@ -153,15 +156,15 @@ CREATE TABLE Purchase (
     itemID CHAR(7) NOT NULL,
     bookingID CHAR(7) NOT NULL,
     passengerID CHAR(7) NOT NULL,
-    FOREIGN KEY (ItemID) REFERENCES Item(itemID),
-    FOREIGN KEY (BookingID) REFERENCES Booking(bookingID),
-    FOREIGN KEY (PassengerID) REFERENCES Passenger(passengerID)
+    FOREIGN KEY (itemID) REFERENCES Item(itemID),
+    FOREIGN KEY (bookingID) REFERENCES Booking(bookingID),
+    FOREIGN KEY (passengerID) REFERENCES Passenger(passengerID)
 );
 
 CREATE TABLE BookingDetails (
     bookingID CHAR(7) NOT NULL,
     passengerID CHAR(7) NOT NULL,
-    wayID CHAR(3) NOT NULL,
+    wayID NUMBER(1) NOT NULL,
     price NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
     status VARCHAR(15) NOT NULL,
     flightScheduleID CHAR(7),
@@ -175,7 +178,6 @@ CREATE TABLE BookingDetails (
     FOREIGN KEY (flightScheduleID) REFERENCES FlightSchedule(flightScheduleID),
     FOREIGN KEY (seatNumber, airplaneID) REFERENCES Seat(seatNumber, airplaneID),
     FOREIGN KEY (purchaseID) REFERENCES Purchase(purchaseID),
-    FOREIGN KEY (policyID) REFERENCES Policy(policyID)
+    FOREIGN KEY (policyID) REFERENCES Policy(policyID),
+    CONSTRAINT chk_wayID CHECK (wayID IN (1, 2))
 );
-
-ALTER SESSION SET NLS_DATE_FORMAT='DD-MM-YYYY';
