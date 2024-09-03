@@ -23,7 +23,7 @@ ALTER SESSION SET NLS_DATE_FORMAT='DD/MM/YYYY';
 
 CREATE TABLE Member (
     memberID CHAR(7) PRIMARY KEY,
-    memberName VARCHAR(30) NOT NULL,
+    memberName VARCHAR(100) NOT NULL,
     memberEmail VARCHAR(100) NOT NULL,
     memberPhone VARCHAR(11) NOT NULL,
     CONSTRAINT chk_Member_Phone CHECK (REGEXP_LIKE(memberPhone, '^01[0-9]{8}$')),
@@ -32,7 +32,7 @@ CREATE TABLE Member (
 
 CREATE TABLE Passenger (
     passengerID CHAR(7) PRIMARY KEY,
-    passengerName VARCHAR(30) NOT NULL,
+    passengerName VARCHAR(100) NOT NULL,
     passportNumber VARCHAR(10) NOT NULL,
     dOB DATE NOT NULL,
     gender CHAR(1) NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE Item (
 
 CREATE TABLE Staff (
     staffID CHAR(7) PRIMARY KEY,
-    staffName VARCHAR(255) NOT NULL,
+    staffName VARCHAR(100) NOT NULL,
     role VARCHAR(255) NOT NULL,
     staffPhone VARCHAR(20) NOT NULL,
     staffEmail VARCHAR(255) NOT NULL,
