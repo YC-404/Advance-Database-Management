@@ -1714,6 +1714,7 @@ insert into WorkAllocation (allocationID, staffID, flightScheduleID) values ('WA
 insert into WorkAllocation (allocationID, staffID, flightScheduleID) values ('WA' || LPAD(allocation_id_seq.NEXTVAL, 5, '0'), 'S00012', 'FS00076');
 insert into WorkAllocation (allocationID, staffID, flightScheduleID) values ('WA' || LPAD(allocation_id_seq.NEXTVAL, 5, '0'), 'S00057', 'FS00066');
 
+--INSERT INSURANCE
 
 --INSERT BOOKING DETAILS
 
