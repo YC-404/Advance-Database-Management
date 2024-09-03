@@ -46,6 +46,7 @@ CREATE TABLE Airplane (
     model VARCHAR(30) NOT NULL,
     capacity NUMBER(3) NOT NULL,
     planeStatus VARCHAR(10) NOT NULL,
+    CONSTRAINT chk_planeStatus CHECK (planeStatus IN ('Available', 'Unavailable'))
 );
 
 CREATE TABLE Part (
