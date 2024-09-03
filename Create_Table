@@ -126,7 +126,7 @@ CREATE TABLE Booking (
 );
 
 CREATE TABLE WorkAllocation (
-    allocationID CHAR(6) PRIMARY KEY,
+    allocationID CHAR(7) PRIMARY KEY,
     staffID CHAR(6) NOT NULL,
     flightScheduleID CHAR(6) NOT NULL,
     FOREIGN KEY (staffID) REFERENCES Staff(staffID),
@@ -134,7 +134,7 @@ CREATE TABLE WorkAllocation (
 );
 
 CREATE TABLE Maintenance (
-    maintenanceID CHAR(6) PRIMARY KEY,
+    maintenanceID CHAR(7) PRIMARY KEY,
     maintenanceDate DATE NOT NULL,
     airplaneID CHAR(6) NOT NULL,
     partID CHAR(6) NOT NULL,
