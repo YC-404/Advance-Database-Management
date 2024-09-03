@@ -162,6 +162,7 @@ CREATE TABLE Purchase (
 );
 
 CREATE TABLE BookingDetails (
+    bookingdetailsID CHAR(7) NOT NULL,
     bookingID CHAR(7) NOT NULL,
     passengerID CHAR(7) NOT NULL,
     wayID NUMBER(1) NOT NULL,
