@@ -53,9 +53,9 @@ CREATE TABLE Part (
 );
 
 CREATE TABLE Insurance (
-    insuranceID CHAR(7) PRIMARY KEY,
-    insuranceName VARCHAR(70) NOT NULL,
-    Description VARCHAR(255) NOT NULL
+    insuranceID CHAR(6) PRIMARY KEY,
+    insuranceName VARCHAR(30) NOT NULL,
+    Description VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Item (
