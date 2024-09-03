@@ -213,200 +213,220 @@ insert into Item (itemID, itemName, itemPrice, itemSstock)
 values ('I' || LPAD(item_id_seq.NEXTVAL, 5, '0'), 'snacks', '31.92', '100');
 
 --INSERT STAFF
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Violetta Westberg', '0114301140');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Lotte Easey', '0181461564');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Stephannie Fanshawe', '0102920434');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kirbee Gawne', '0167396437');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Natka Zold', '0186192288');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Gale Jerratsch', '0122976644');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mahmoud Probey', '0147018692');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Edlin Scholey', '0157444443');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Claretta Claremont', '0189986682');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Hadley Donnan', '0131298712');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Enid Elphinston', '0190617301');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Loraine Eneas', '0160927925');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Rosie Coslitt', '0189908125');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Banky Angrave', '0110345279');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Shea Cleland', '0171397611');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Brittany Mordue', '0135467890');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jared Lister', '0146765432');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Sage Egleton', '0158765432');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Dana Corser', '0169896543');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Raymund Woodgate', '0171987654');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kaya Dearing', '0183456789');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Carmen Aldin', '0123456789');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mindy Grose', '0192345678');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Arnold Rowland', '0156789123');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Linda Bricknell', '0145678901');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Blake Pullen', '0123987654');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Eli Copplestone', '0187654321');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Olivia Rountree', '0192837465');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ronin Childerhouse', '0123987653');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mya Lambe', '0198745623');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Zara Tansley', '0189374625');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Dale Legg', '0167483920');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Neve Dellar', '0158473920');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Shaun Grist', '0123847563');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Miles Bygrave', '0168374920');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ryleigh Coultous', '0173847509');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ayden Scrivens', '0192837456');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Elise Fenwick', '0123847562');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Demi Humphrey', '0183948576');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Evan Croucher', '0172839475');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Hollie Allcock', '0192837451');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Callum Hadden', '0183749502');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Georgia Allsopp', '0123948573');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Rian Ledwith', '0168472935');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Aubrey Tebbutt', '0173948502');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Imogen Wilber', '0193847592');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Maxim Pateman', '0123847591');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Zachary Dimbleby', '0183745920');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Brennan Court', '0143847592');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ashton Slade', '0172839573');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Leona Moxon', '0159384720');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Joey Twigg', '0183847592');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Rico Kimber', '0192837461');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Tiana Storrar', '0123847590');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Harris Watling', '0159384729');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Eden MacConnechy', '0173948503');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Nico Phipps', '0123847509');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Summer Trowell', '0193847502');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Robin Smither', '0167483921');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Macy Tebbutt', '0173948573');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ryder Cant', '0189374502');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Graham McKeand', '0193847501');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Roxie Nankivell', '0167483923');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Easton Cheyne', '0159374820');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Caden Binning', '0148492048');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kye Stockdale', '0157492048');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Milo McEwen', '0193748501');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Violet Cairns', '0148375948');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Laurie Millington', '0158375948');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Leon Abbott', '0192837501');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Flynn Magill', '0173847509');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Silas Dimmock', '0168492048');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Sienna Madigan', '0192837502');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Logan Hatfield', '0183749501');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Maddison Rothwell', '0178492048');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jaxon Moffatt', '0168492047');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Bodhi Hatfield', '0176492048');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Chase Crowther', '0183749204');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Zane Whalley', '0158492048');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Noah Collinson', '0148492058');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Oscar Ryley', '0158492058');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ruby Horsfield', '0193847503');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Harvey Vallance', '0183749503');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Emily Glyde', '0178492046');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Finn Martin', '0168492045');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Oliver Delacruz', '0158492049');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ella Nowak', '0148492059');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mason Alston', '0138492048');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ava Horton', '0128492059');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Lucas Winter', '0118492049');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Evelyn McGuire', '0138492059');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jackson Marshall', '0148492060');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Zoe Cameron', '0158492060');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Hudson Sharp', '0168492061');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Liam Middleton', '0178492062');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Sophia Hudson', '0188492062');
-insert into Staff (staffID, staffName, staffPhone) 
-values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mia Walton', '0198492063');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Violetta Westberg', 'Pilot', '0114301140');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Lotte Easey', 'Co-Pilot', '0181461564');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Stephannie Fanshawe', 'Flight Attendant', '0102920434');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kirbee Gawne', 'Flight Attendant', '0167396437');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Natka Zold', 'Flight Attendant', '0186192288');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Gale Jerratsch', 'Pilot', '0122976644');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mahmoud Probey', 'Co-Pilot', '0147018692');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Edlin Scholey', 'Flight Engineer', '0157444443');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Claretta Claremont', 'Pilot', '0189986682');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Hadley Donnan', 'Flight Attendant', '0131298712');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Enid Elphinston', 'Flight Attendant', '0190617301');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Loraine Eneas', 'Co-Pilot', '0160927925');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Rosie Coslitt', 'Flight Attendant', '0189908125');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Banky Angrave', 'Flight Attendant', '0110345279');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Shea Cleland', 'Flight Attendant', '0171397611');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Brittany Mordue', 'Pilot', '0135467890');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jared Lister', 'Co-Pilot', '0146765432');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Sage Egleton', 'Flight Attendant', '0158765432');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Dana Corser', 'Flight Attendant', '0169896543');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Raymund Woodgate', 'Flight Attendant', '0171987654');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kaya Dearing', 'Flight Engineer', '0183456789');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Carmen Aldin', 'Flight Attendant', '0123456789');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mindy Grose', 'Flight Attendant', '0192345678');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Arnold Rowland', 'Co-Pilot', '0156789123');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Linda Bricknell', 'Flight Attendant', '0145678901');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Blake Pullen', 'Flight Attendant', '0123987654');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Eli Copplestone', 'Pilot', '0187654321');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Olivia Rountree', 'Co-Pilot', '0192837465');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ronin Childerhouse', 'Flight Attendant', '0123987653');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mya Lambe', 'Flight Attendant', '0198745623');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Zara Tansley', 'Flight Attendant', '0189374625');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Dale Legg', 'Flight Attendant', '0167483920');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Neve Dellar', 'Pilot', '0158473920');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Shaun Grist', 'Flight Engineer', '0123847563');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Miles Bygrave', 'Flight Attendant', '0168374920');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ryleigh Coultous', 'Flight Attendant', '0173847509');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ayden Scrivens', 'Flight Attendant', '0192837456');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jadey Begg', 'Flight Attendant', '0193847567');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Blane Spurdle', 'Flight Engineer', '0159847563');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Deana Northen', 'Flight Attendant', '0167483941');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jarod Pethers', 'Pilot', '0145678932');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Remy Cather', 'Co-Pilot', '0157482930');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Nyree Hagger', 'Flight Engineer', '0189273645');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Regina Manhire', 'Flight Attendant', '0174859302');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Trevan Curle', 'Flight Attendant', '0145849302');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Nyree Scrase', 'Flight Attendant', '0134859302');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Archer Colclough', 'Flight Attendant', '0192847562');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Larissa Wild', 'Flight Attendant', '0183847591');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Dexter Rowles', 'Pilot', '0173847592');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Debora Caiger', 'Co-Pilot', '0164859302');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Tobey Shawcross', 'Flight Engineer', '0147562830');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Reece Greenlees', 'Flight Attendant', '0158392012');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jasmine Pizer', 'Flight Attendant', '0187485932');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kelby Ogilby', 'Flight Attendant', '0138492301');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Taya Puddick', 'Flight Attendant', '0192837465');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jordana Luetchford', 'Pilot', '0158492730');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kory Grice', 'Co-Pilot', '0145873029');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Andi Birchmore', 'Flight Attendant', '0134859301');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Saxon Scolding', 'Flight Attendant', '0128475930');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Tatum Grover', 'Flight Attendant', '0168493021');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Georgina Mallery', 'Flight Engineer', '0192837561');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Brendan Railton', 'Pilot', '0174859302');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Soraya Wainwright', 'Co-Pilot', '0192837561');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Koby Guthrie', 'Flight Engineer', '0158493021');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Abbi Devers', 'Flight Attendant', '0183475930');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Billy Palfreman', 'Flight Attendant', '0148573029');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Lizette Plant', 'Flight Attendant', '0134859302');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Gethin Widdicombe', 'Pilot', '0182937465');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Corine Aisthorpe', 'Co-Pilot', '0178493021');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kordell Brunning', 'Flight Attendant', '0158493021');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Donia Westcot', 'Flight Attendant', '0148392032');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Lorna Gillan', 'Flight Engineer', '0167485931');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mollie Topham', 'Pilot', '0172849573');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Alphonso Dolder', 'Co-Pilot', '0138492750');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Belita Sutherland', 'Flight Attendant', '0128473029');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Santo Wolmuth', 'Flight Attendant', '0194859302');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Phelan Hellman', 'Flight Engineer', '0172938475');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Malaki Hockin', 'Flight Attendant', '0183845932');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Daylin Wrought', 'Pilot', '0167583941');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Isobel Croan', 'Co-Pilot', '0193847562');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Hadyn Jammett', 'Flight Attendant', '0189475932');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Luana Cambden', 'Flight Attendant', '0174859302');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Xenia Lemere', 'Flight Attendant', '0164859302');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Fergus Bachelar', 'Flight Engineer', '0148573021');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Inigo Wheldon', 'Pilot', '0157384932');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Janai Hallet', 'Co-Pilot', '0138492751');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Tariq Dunstan', 'Flight Attendant', '0128479301');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Adriel Kneller', 'Flight Attendant', '0164853029');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Yvette Wonnacott', 'Flight Engineer', '0172837561');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Parker Grose', 'Pilot', '0192847562');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Terryn Gornall', 'Co-Pilot', '0148392753');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Mikayla Latter', 'Flight Attendant', '0157384931');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Vito Shorthouse', 'Flight Attendant', '0183845929');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Taryn Willers', 'Flight Attendant', '0194859303');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jersey Chalk', 'Flight Engineer', '0158492753');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Montague Linforth', 'Pilot', '0147589302');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Amaya Hynard', 'Co-Pilot', '0138492032');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jael Randle', 'Flight Attendant', '0174859303');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jaydon Landon', 'Flight Attendant', '0158493020');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Marin Rutley', 'Flight Attendant', '0128473021');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Sorcha Rysdale', 'Flight Engineer', '0147589301');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Cruz Parmer', 'Pilot', '0173847590');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Zara Habeshaw', 'Co-Pilot', '0183847592');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Samara Relton', 'Flight Attendant', '0193847567');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Auden Abarrow', 'Flight Attendant', '0173847561');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Bliss Welberry', 'Flight Attendant', '0192837560');
+insert into Staff (staffID, staffName, role, staffPhone) 
+values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Kannon Thaw', 'Flight Attendant', '0183849302');
 
 --INSERT BOOKING
 INSERT INTO Booking (bookingID, bookingDate, totalAmount, memberID, discountID) 
