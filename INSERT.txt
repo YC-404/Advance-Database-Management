@@ -1704,7 +1704,7 @@ insert into Airplane (airplaneID, model, capacity,planeStatus)
 values ('A27100', 'Fairchild-Dornier 328JET', 30, 'Available');
 insert into Airplane (airplaneID, model, capacity,planeStatus) 
 values ('A03961', 'Embraer ERJ-135', 30, 'Available');
-insert into Airplane (airplaneID, model, capacity),planeStatus)  
+insert into Airplane (airplaneID, model, capacity,planeStatus)  
 values ('A64078', 'Embraer ERJ-135', 30, 'Available');
 insert into Airplane (airplaneID, model, capacity,planeStatus) 
 values ('A48999', 'Embraer ERJ-135', 30, 'Available');
