@@ -44,7 +44,8 @@ CREATE TABLE Discount (
 CREATE TABLE Airplane (
     airplaneID CHAR(6) PRIMARY KEY,
     model VARCHAR(30) NOT NULL,
-    capacity NUMBER(3) NOT NULL
+    capacity NUMBER(3) NOT NULL,
+    planeStatus VARCHAR(10) NOT NULL,
 );
 
 CREATE TABLE Part (
