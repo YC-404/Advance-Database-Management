@@ -683,7 +683,7 @@ insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Eddy Peaseman', 'W767359581', '05/07/1999', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Basilius Pelling', 'R027284482', '28/08/2003', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Hazel Matejic', 'D832839674', '15/10/1991', 'M');
-insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Dallas O'Dunneen', 'K840707516', '20/07/1999', 'F');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Dallas O Dunneen', 'K840707516', '20/07/1999', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Jemie Pickering', 'K564988079', '25/06/1994', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Quill Leydon', 'A274579765', '09/12/1992', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Leland Borg', 'N213262146', '24/12/1997', 'M');
@@ -766,7 +766,7 @@ insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Marybeth Roberts', 'D705448777', '23/01/2001', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Tamar Peachman', 'B694943604', '18/07/2002', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Alfonso Ingerith', 'B745486982', '18/01/1994', 'M');
-insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Chandler O'Lagene', 'D193242167', '27/05/2005', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Chandler O Lagene', 'D193242167', '27/05/2005', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Drusy Dudding', 'H180373724', '19/07/1995', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Margret Dory', 'M274429750', '01/11/1990', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Deborah Water', 'I354820250', '26/05/1998', 'F');
@@ -782,7 +782,7 @@ insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Patrick Rigts', 'H779749134', '13/06/1993', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Eberhard Burnie', 'I679706985', '09/03/2003', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Lou Elletson', 'Z181460759', '09/12/1997', 'F');
-insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Alfy O'Neill', 'W074628647', '31/07/2001', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Alfy O Neill', 'W074628647', '31/07/2001', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Kathe Sundin', 'I476881502', '12/04/1994', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Raimund Screach', 'Z107137306', '25/03/1999', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Wald Stuchbery', 'I531355133', '09/10/2001', 'F');
@@ -897,7 +897,7 @@ insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Bobby Bausor', 'R974464191', '24/01/1999', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Vitia Mc Mechan', 'B398581496', '28/09/1994', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Tamma Cinavas', 'B378333586', '05/09/2004', 'M');
-insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Alyssa O'Heneghan', 'F278695783', '22/09/1993', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Alyssa O Heneghan', 'F278695783', '22/09/1993', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Maurits Genney', 'M603933786', '27/06/2005', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Christyna Feetham', 'M231543203', '13/03/1997', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Urson Bamlett', 'I442520905', '24/04/1997', 'F');
@@ -908,7 +908,7 @@ insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Benjamin Blabey', 'G917779700', '21/06/2003', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Idelle Barthelmes', 'J763136807', '19/11/1995', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Sibilla Leidecker', 'U594518484', '20/06/2000', 'M');
-insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Baillie O'Doherty', 'R129707504', '15/04/1999', 'F');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Baillie O Doherty', 'R129707504', '15/04/1999', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Neron Bucher', 'H879738428', '29/05/1991', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Marcus Morby', 'V295244834', '17/04/2002', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Fonzie Clardge', 'A477071757', '16/06/2003', 'F');
@@ -1176,7 +1176,7 @@ insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Fawn Jacquest', 'A422652345', '17/12/1993', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Brandi Fauning', 'G965145799', '10/06/2003', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Ginni Tongue', 'W107090132', '18/08/2004', 'F');
-insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Monique O'Cannon', 'J684292128', '12/12/1993', 'F');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Monique O Cannon', 'J684292128', '12/12/1993', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Aleen Swetenham', 'I106524833', '05/03/2002', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Raynell Janczak', 'Z154852487', '04/12/2004', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Nathanael Lagden', 'O377172156', '19/12/1992', 'M');
@@ -1329,7 +1329,7 @@ insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Kelley Galey', 'O535103656', '24/04/1990', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Gerti McNally', 'T812192132', '06/03/1994', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Ozzy Syder', 'N367775326', '21/02/1995', 'M');
-insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Monah O'Brogane', 'P793793412', '30/11/1999', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Monah O Brogane', 'P793793412', '30/11/1999', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Ludovico Nind', 'M907739871', '08/02/1991', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Gayelord Trank', 'O032807475', '19/09/1998', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Marysa Tappor', 'S395522156', '21/10/1995', 'M');
@@ -1377,7 +1377,7 @@ insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Demetris Coote', 'F924381398', '19/12/2004', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Niles Grigolli', 'A083393679', '05/07/1992', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Marwin Corry', 'U399375371', '12/08/1993', 'M');
-insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Devin O'Lunny', 'G615481063', '22/02/1992', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Devin O Lunny', 'G615481063', '22/02/1992', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Amalita Checchetelli', 'J843575010', '14/05/1999', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Rancell Aleevy', 'U920910000', '26/02/2002', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Ingaborg Gorrie', 'U762003029', '24/07/1996', 'F');
@@ -1401,7 +1401,7 @@ insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Rana Lendrem', 'H466867392', '01/11/2002', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Hastie Lenox', 'K498527181', '18/04/1993', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Karena Jinda', 'Y717291613', '08/02/1992', 'F');
-insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Jeni O'Gorman', 'K491820540', '01/01/1996', 'F');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Jeni O Gorman', 'K491820540', '01/01/1996', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Ravid Kinavan', 'Z664577150', '06/09/2003', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Rosalyn Mitcham', 'N208195316', '13/03/1993', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Bary Innott', 'X308563087', '06/11/2001', 'F');
@@ -1651,7 +1651,7 @@ insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) 
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Baudoin Edyson', 'F911466216', '23/01/1996', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Sherry Golland', 'F561739389', '19/06/1996', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Ed Kwietek', 'L759412382', '05/08/1993', 'F');
-insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Clemmy O'Hern', 'U617656190', '14/10/1999', 'M');
+insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Clemmy O Hern', 'U617656190', '14/10/1999', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Keeley Reason', 'W202642483', '27/10/1991', 'M');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Marnia De Few', 'D690327689', '15/08/2002', 'F');
 insert into Passenger (passengerID, passengerName, passportNumber, dOB, gender) values ('P' || LPAD(passenger_id_seq.NEXTVAL, 5, '0'), 'Maude Cargen', 'O502687561', '22/04/2001', 'M');
@@ -1985,12 +1985,12 @@ insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S'
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Norby McGann', 'engineer', '0197695335', 'nmcgann4m@squarespace.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Hazlett Shrubb', 'pilot', '0157208008', 'hshrubb4n@t.co');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Wilie Peddel', 'flight attendant', '0197294517', 'wpeddel4o@ucoz.com');
-insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Letti O''Hanley', 'co-pilot', '0158929265', 'lohanley4p@fda.gov');
+insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Letti O Hanley', 'co-pilot', '0158929265', 'lohanley4p@fda.gov');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Eimile Burdus', 'engineer', '0109668181', 'eburdus4q@aol.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Loren Sirette', 'pilot', '0193513711', 'lsirette4r@ed.gov');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Sonia Cromack', 'flight attendant', '0138963042', 'scromack4s@wikia.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Novelia Borzone', 'navigator', '0116184244', 'nborzone4t@globo.com');
-insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Teirtza O''Day', 'pilot', '0178004187', 'today4u@de.vu');
+insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Teirtza O Day', 'pilot', '0178004187', 'today4u@de.vu');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ellette Ambrosoni', 'navigator', '0165949100', 'eambrosoni4v@illinois.edu');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Myca Troucher', 'engineer', '0122349580', 'mtroucher4w@printfriendly.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Maynard Rapson', 'flight attendant', '0191413551', 'mrapson4x@slideshare.net');
@@ -2135,7 +2135,7 @@ insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S'
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Fitzgerald Mix', 'flight attendant', '0143177933', 'fmix8s@liveinternet.ru');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Curtice Cockshtt', 'flight attendant', '0195841192', 'ccockshtt8t@ebay.co.uk');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Julie Learoyd', 'co-pilot', '0135187578', 'jlearoyd8u@opensource.org');
-insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Agnese O''Breen', 'pilot', '0143996055', 'aobreen8v@ning.com');
+insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Agnese O Breen', 'pilot', '0143996055', 'aobreen8v@ning.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Sandy Vedyaev', 'co-pilot', '0153100548', 'svedyaev8w@deliciousdays.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Lucia Ault', 'co-pilot', '0129383893', 'lault8x@pagesperso-orange.fr');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Shepperd Grossman', 'co-pilot', '0173557845', 'sgrossman8y@studiopress.com');
@@ -2151,7 +2151,7 @@ insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S'
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Tamma Oxberry', 'navigator', '0186089989', 'toxberry98@cdc.gov');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Clyde Libbey', 'engineer', '0179755842', 'clibbey99@tumblr.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Obie Knowlson', 'engineer', '0175481804', 'oknowlson9a@businesswire.com');
-insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Emlyn O''Hdirscoll', 'flight attendant', '0151540047', 'eohdirscoll9b@ocn.ne.jp');
+insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Emlyn O Hdirscoll', 'flight attendant', '0151540047', 'eohdirscoll9b@ocn.ne.jp');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Quincy Gaitung', 'engineer', '0190937853', 'qgaitung9c@qq.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Leigh Quenby', 'flight attendant', '0156324323', 'lquenby9d@scribd.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ashia Drinnan', 'engineer', '0124328729', 'adrinnan9e@dagondesign.com');
@@ -2501,7 +2501,7 @@ insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S'
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Andee Parfitt', 'engineer', '0124497648', 'aparfittiy@ning.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Alden Ledner', 'co-pilot', '0143498174', 'aledneriz@youtu.be');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Biron Marriott', 'co-pilot', '0158505343', 'bmarriottj0@studiopress.com');
-insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Louisette O''Dreain', 'navigator', '0151842552', 'lodreainj1@eventbrite.com');
+insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Louisette O Dreain', 'navigator', '0151842552', 'lodreainj1@eventbrite.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jarred Hryskiewicz', 'flight attendant', '0133082871', 'jhryskiewiczj2@joomla.org');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Steve Kingsnoad', 'flight attendant', '0132517240', 'skingsnoadj3@loc.gov');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Linn Pilbeam', 'co-pilot', '0137586521', 'lpilbeamj4@go.com');
@@ -2537,7 +2537,7 @@ insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S'
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Jacqueline Beal', 'co-pilot', '0136049708', 'jbealjy@hexun.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Charlene Loveredge', 'pilot', '0150585677', 'cloveredgejz@163.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Packston Pavic', 'engineer', '0128124853', 'ppavick0@paginegialle.it');
-insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Johan O''Heaney', 'navigator', '0157467198', 'joheaneyk1@china.com.cn');
+insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Johan O Heaney', 'navigator', '0157467198', 'joheaneyk1@china.com.cn');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Iona Rubanenko', 'pilot', '0186088129', 'irubanenkok2@blogs.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Vyky Weadick', 'co-pilot', '0139751973', 'vweadickk3@umn.edu');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Armand Redley', 'navigator', '0177817546', 'aredleyk4@toplist.cz');
@@ -2803,7 +2803,7 @@ insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S'
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Tyne Stanyer', 'pilot', '0199028713', 'tstanyerrc@issuu.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Bryn Rosengarten', 'flight attendant', '0107592409', 'brosengartenrd@npr.org');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Husein Mabson', 'engineer', '0144128816', 'hmabsonre@vimeo.com');
-insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Gerard O'' Ronan', 'engineer', '0192055451', 'gorf@jimdo.com');
+insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Gerard O  Ronan', 'engineer', '0192055451', 'gorf@jimdo.com');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Belva Belvard', 'navigator', '0119565982', 'bbelvardrg@ucoz.ru');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Ilario Bolwell', 'flight attendant', '0194627933', 'ibolwellrh@unblog.fr');
 insert into Staff (staffID, staffName, role, staffPhone, staffEmail) values ('S' || LPAD(staff_id_seq.NEXTVAL, 5, '0'), 'Godwin Wormald', 'navigator', '0183867396', 'gwormaldri@aol.com');
