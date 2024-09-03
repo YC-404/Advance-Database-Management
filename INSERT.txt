@@ -416,7 +416,7 @@ values ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'), 'Clary Corness', 'ccorness5b
 insert into Member (memberID, memberName, memberEmail, memberPhone) 
 values ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'), 'Adiana Gawthrop', 'agawthrop5c@unesco.org', '0167692700');
 insert into Member (memberID, memberName, memberEmail, memberPhone) 
-values ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'), 'Johnnie O'Downe', 'jodowne5d@google.com', '0110017125');
+values ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'), 'Johnnie O Downe', 'jodowne5d@google.com', '0110017125');
 insert into Member (memberID, memberName, memberEmail, memberPhone) 
 values ('M' || LPAD(member_id_seq.NEXTVAL, 5, '0'), 'Iorgo Dunkley', 'idunkley5e@stanford.edu', '0188824085');
 insert into Member (memberID, memberName, memberEmail, memberPhone) 
