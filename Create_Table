@@ -81,12 +81,12 @@ CREATE TABLE Luggage (
 );
 
 CREATE TABLE FlightSchedule (
-    flightScheduleID CHAR(6) PRIMARY KEY,
+    flightScheduleID CHAR(7) PRIMARY KEY,
     flightDate DATE NOT NULL,
-    departureTime TIMESTAMP NOT NULL,
-    arrivalTime TIMESTAMP NOT NULL,
+    departureTime VARCHAR(10) NOT NULL,
+    arrivalTime VARCHAR(10) NOT NULL,
     origin VARCHAR(20) NOT NULL,
-    destination VARCHAR(30) NOT NULL,
+    destination VARCHAR(20) NOT NULL,
     airplaneID CHAR(6) NOT NULL,
     FOREIGN KEY (airplaneID) REFERENCES Airplane(airplaneID)
 );
