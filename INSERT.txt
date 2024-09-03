@@ -118,35 +118,37 @@ values ('A84157', 'Bombardier Global 6000', 200);
 
 --INSERT PART
 insert into Part (partID, partName) 
-values (757104, 'filter');
+values (0, 'No Part Changed');
 insert into Part (partID, partName) 
-values (633670, 'motor');
+values (757104, 'Filter');
 insert into Part (partID, partName) 
-values (613960, 'pump');
+values (633670, 'Motor');
 insert into Part (partID, partName) 
-values (948380, 'pump');
+values (613960, 'Pump');
 insert into Part (partID, partName) 
-values (460200, 'screw');
+values (948380, 'Pump');
 insert into Part (partID, partName) 
-values (238510, 'motor');
+values (460200, 'Screw');
 insert into Part (partID, partName) 
-values (81766, 'bolt');
+values (238510, 'Motor');
 insert into Part (partID, partName) 
-values (343405, 'motor');
+values (81766, 'Bolt');
 insert into Part (partID, partName) 
-values (581786, 'pump');
+values (343405, 'Motor');
 insert into Part (partID, partName) 
-values (642428, 'valve');
+values (581786, 'Pump');
 insert into Part (partID, partName) 
-values (907880, 'motor');
+values (642428, 'Valve');
 insert into Part (partID, partName) 
-values (208234, 'pump');
+values (907880, 'Motor');
 insert into Part (partID, partName) 
-values (954511, 'nut');
+values (208234, 'Pump');
 insert into Part (partID, partName) 
-values (312643, 'pump');
+values (954511, 'Nut');
 insert into Part (partID, partName) 
-values (303843, 'hose');
+values (312643, 'Pump');
+insert into Part (partID, partName) 
+values (303843, 'Hose');
 
 --INSERT INSURANCE
 insert into Insurance (insuranceID, insuranceName, description) 
