@@ -178,7 +178,7 @@ CREATE TABLE BookingDetails (
     FOREIGN KEY (passengerID) REFERENCES Passenger(passengerID),
     FOREIGN KEY (depatureSchedule) REFERENCES FlightSchedule(flightScheduleID),
     FOREIGN KEY (returnSchedule) REFERENCES FlightSchedule(flightScheduleID),
-    FOREIGN KEY (seatNumber) REFERENCES Seat(seatNumber),
+    FOREIGN KEY (seatNumber, airplaneID) REFERENCES Seat(seatNumber, airplaneID),
     FOREIGN KEY (purchaseID) REFERENCES Purchase(purchaseID),
     FOREIGN KEY (policyID) REFERENCES Policy(policyID),
     CONSTRAINT chk_wayID CHECK (wayID IN (1, 2))
