@@ -171,7 +171,6 @@ CREATE TABLE BookingDetails (
     depatureSchedule CHAR(7),
     returnSchedule CHAR(7),
     seatNumber NUMBER(2) NOT NULL,
-    airplaneID CHAR(7) NOT NULL,
     purchaseID CHAR(7),
     policyID CHAR(7) NOT NULL,
     PRIMARY KEY (bookingdetailsID, bookingID, passengerID, wayID),
@@ -179,7 +178,7 @@ CREATE TABLE BookingDetails (
     FOREIGN KEY (passengerID) REFERENCES Passenger(passengerID),
     FOREIGN KEY (depatureSchedule) REFERENCES FlightSchedule(flightScheduleID),
     FOREIGN KEY (returnSchedule) REFERENCES FlightSchedule(flightScheduleID),
-    FOREIGN KEY (seatNumber, airplaneID) REFERENCES Seat(seatNumber, airplaneID),
+    FOREIGN KEY (seatNumber) REFERENCES Seat(seatNumber),
     FOREIGN KEY (purchaseID) REFERENCES Purchase(purchaseID),
     FOREIGN KEY (policyID) REFERENCES Policy(policyID),
     CONSTRAINT chk_wayID CHECK (wayID IN (1, 2))
