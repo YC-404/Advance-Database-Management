@@ -50,7 +50,7 @@ CREATE TABLE Airplane (
     airplaneID CHAR(7) PRIMARY KEY,
     model VARCHAR(30) NOT NULL,
     capacity NUMBER(3) NOT NULL,
-    planeStatus VARCHAR(10) NOT NULL,
+    planeStatus VARCHAR(11) NOT NULL,
     CONSTRAINT chk_planeStatus CHECK (planeStatus IN ('Available', 'Unavailable'))
 );
 
