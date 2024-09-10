@@ -2056,29 +2056,29 @@ values (303843, 'Hose');
 insert into Insurance (insuranceID, insuranceName, description) 
 values (425726, 'Allstate', 'Liability insurance');
 insert into Insurance (insuranceID, insuranceName, description) 
-values (625221, 'Progressive', 'Underinsured motorist coverage');
+values (625221, 'Allianz', 'Underinsured motorist coverage');
 insert into Insurance (insuranceID, insuranceName, description) 
-values (290678, 'Nationwide', 'Liability insurance');
+values (290678, 'Axa', 'Liability insurance');
 insert into Insurance (insuranceID, insuranceName, description) 
-values (463195, 'Progressive', 'Comprehensive coverage');
+values (463195, 'Ping An Insurance', 'Comprehensive coverage');
 insert into Insurance (insuranceID, insuranceName, description) 
-values (245576, 'State Farm', 'Personal injury protection');
+values (245576, 'AIG', 'Personal injury protection');
 insert into Insurance (insuranceID, insuranceName, description) 
-values (540377, 'Allstate', 'Comprehensive coverage');
+values (540377, 'Chubb', 'Comprehensive coverage');
 insert into Insurance (insuranceID, insuranceName, description) 
-values (706021, 'Allstate', 'Personal injury protection');
+values (706021, 'AIA', 'Personal injury protection');
 insert into Insurance (insuranceID, insuranceName, description) 
 values (990564, 'State Farm', 'Collision coverage');
 insert into Insurance (insuranceID, insuranceName, description) 
-values (599017, 'Nationwide', 'Liability insurance');
+values (599017, 'New York Life', 'Liability insurance');
 insert into Insurance (insuranceID, insuranceName, description) 
-values (447821, 'Allstate', 'Underinsured motorist coverage');
+values (447821, 'MetLife', 'Underinsured motorist coverage');
 insert into Insurance (insuranceID, insuranceName, description) 
-values (993076, 'Geico', 'Comprehensive coverage');
+values (993076, 'Cigna', 'Comprehensive coverage');
 insert into Insurance (insuranceID, insuranceName, description) 
 values (293821, 'Progressive', 'Collision coverage');
 insert into Insurance (insuranceID, insuranceName, description) 
-values (588638, 'Geico', 'Personal injury protection');
+values (588638, 'Elevance Health', 'Personal injury protection');
 insert into Insurance (insuranceID, insuranceName, description) 
 values (553103, 'Geico', 'Personal injury protection');
 insert into Insurance (insuranceID, insuranceName, description) 
