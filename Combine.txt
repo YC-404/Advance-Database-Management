@@ -144,6 +144,7 @@ CREATE TABLE WorkAllocation (
 CREATE TABLE Maintenance (
     maintenanceID CHAR(7) PRIMARY KEY,
     maintenanceDate DATE NOT NULL,
+    maintenanceFee NUMBER(10, 2) DEFAULT 0.0 NOT NULL,
     airplaneID CHAR(7) NOT NULL,
     partID CHAR(7) NOT NULL,
     FOREIGN KEY (airplaneID) REFERENCES Airplane(airplaneID),
@@ -6730,370 +6731,306 @@ insert into WorkAllocation (allocationID, staffID, flightScheduleID) values ('WA
 insert into WorkAllocation (allocationID, staffID, flightScheduleID) values ('WA' || LPAD(allocation_id_seq.NEXTVAL, 5, '0'), 'S00057', 'FS00066');
 
 --INSERT MAINTENANCE
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/11/2023', 'A43576', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/04/2024', 'A77619', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/05/2024', 'A90251', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/09/2023', 'A48999', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/03/2024', 'A90251', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/03/2024', 'A26732', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/07/2024', 'A60262', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/08/2024', 'A77619', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/05/2024', 'A99200', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/02/2024', 'A26732', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/08/2024', 'A03961', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/04/2024', 'A90251', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/04/2024', 'A73203', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/08/2024', 'A99200', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/06/2024', 'A43576', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/09/2023', 'A03961', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '09/08/2024', 'A71143', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/10/2023', 'A48999', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/10/2023', 'A84157', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '14/10/2023', 'A03557', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/08/2024', 'A48999', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/11/2023', 'A43576', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/01/2024', 'A43576', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/08/2024', 'A60262', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/10/2023', 'A26732', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/11/2023', 'A73203', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/05/2024', 'A27100', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/12/2023', 'A90251', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/11/2023', 'A27100', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/03/2024', 'A03557', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/12/2023', 'A99200', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/08/2024', 'A99200', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/12/2023', 'A90251', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/10/2023', 'A73203', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/09/2023', 'A90251', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/04/2024', 'A48999', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/08/2024', 'A60262', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/03/2024', 'A71143', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '03/05/2024', 'A84157', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/12/2023', 'A48999', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/05/2024', 'A71143', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/01/2024', 'A60262', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/03/2024', 'A27100', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/06/2024', 'A03961', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/10/2023', 'A26732', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/04/2024', 'A73203', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/09/2023', 'A99200', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/09/2023', 'A64078', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/02/2024', 'A84157', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/08/2024', 'A71143', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/09/2023', 'A48999', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/02/2024', 'A48999', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/08/2024', 'A03961', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/08/2024', 'A43576', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/07/2024', 'A99200', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/09/2023', 'A03557', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/10/2023', 'A03961', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/10/2023', 'A90251', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/01/2024', 'A60262', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/03/2024', 'A18742', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/02/2024', 'A03961', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/02/2024', 'A03557', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/07/2024', 'A03961', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/12/2023', 'A90251', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/09/2023', 'A73203', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '14/06/2024', 'A26732', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/06/2024', 'A60262', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/03/2024', 'A18742', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/04/2024', 'A26732', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '09/12/2023', 'A71143', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/07/2024', 'A84157', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/09/2023', 'A84157', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '14/08/2024', 'A03961', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/05/2024', 'A64078', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/12/2023', 'A73203', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '03/07/2024', 'A43576', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/03/2024', 'A48999', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/10/2023', 'A73203', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/02/2024', 'A64078', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/01/2024', 'A84157', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/03/2024', 'A18742', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/05/2024', 'A26732', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/03/2024', 'A18742', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/07/2024', 'A48999', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/02/2024', 'A77619', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/07/2024', 'A77619', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/04/2024', 'A48999', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/02/2024', 'A03961', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/02/2024', 'A03557', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/07/2024', 'A18742', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/08/2024', 'A90251', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/05/2024', 'A84157', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/11/2023', 'A18742', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/09/2023', 'A71143', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/02/2024', 'A43576', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/03/2024', 'A64078', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/11/2023', 'A90251', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/08/2024', 'A90251', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/09/2023', 'A03961', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/11/2023', 'A73203', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/08/2024', 'A27100', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/11/2023', 'A90251', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/10/2023', 'A64078', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/04/2024', 'A99200', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/01/2024', 'A73203', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/02/2024', 'A73203', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/10/2023', 'A03557', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/12/2023', 'A03961', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/05/2024', 'A48999', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/11/2023', 'A64078', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/07/2024', 'A48999', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/03/2024', 'A03961', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '03/07/2024', 'A26732', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/05/2024', 'A48999', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/04/2024', 'A64078', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/08/2024', 'A84157', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/08/2024', 'A64078', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/03/2024', 'A73203', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/09/2023', 'A03961', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/01/2024', 'A77619', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/01/2024', 'A71143', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/06/2024', 'A48999', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/06/2024', 'A64078', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/08/2024', 'A77619', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/10/2023', 'A84157', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/08/2024', 'A64078', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/07/2024', 'A48999', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/10/2023', 'A71143', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/03/2024', 'A71143', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/08/2024', 'A84157', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/01/2024', 'A43576', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/02/2024', 'A71143', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/01/2024', 'A48999', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/08/2024', 'A77619', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/05/2024', 'A73203', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/05/2024', 'A27100', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/11/2023', 'A84157', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/01/2024', 'A90251', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/11/2023', 'A03557', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/11/2023', 'A03961', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/07/2024', 'A71143', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/05/2024', 'A26732', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/08/2024', 'A48999', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/03/2024', 'A43576', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/05/2024', 'A99200', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/10/2023', 'A71143', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/03/2024', 'A03557', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/12/2023', 'A48999', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/12/2023', 'A77619', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/11/2023', 'A73203', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/08/2024', 'A71143', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/06/2024', 'A43576', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/04/2024', 'A48999', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/08/2024', 'A48999', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/04/2024', 'A48999', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/12/2023', 'A43576', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/12/2023', 'A27100', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/08/2024', 'A27100', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/10/2023', 'A48999', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/03/2024', 'A60262', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/12/2023', 'A43576', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '03/01/2024', 'A27100', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/01/2024', 'A48999', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/01/2024', 'A73203', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/05/2024', 'A03961', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/06/2024', 'A03557', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/03/2024', 'A71143', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/06/2024', 'A60262', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/09/2023', 'A48999', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/05/2024', 'A90251', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '09/09/2023', 'A48999', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/08/2024', 'A60262', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/12/2023', 'A84157', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/11/2023', 'A77619', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/11/2023', 'A99200', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/11/2023', 'A26732', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/04/2024', 'A90251', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/07/2024', 'A90251', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/11/2023', 'A48999', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/02/2024', 'A84157', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/09/2023', 'A48999', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/06/2024', 'A26732', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/07/2024', 'A60262', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/09/2023', 'A71143', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/07/2024', 'A73203', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/08/2024', 'A26732', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/01/2024', 'A03961', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/02/2024', 'A26732', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/05/2024', 'A73203', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/04/2024', 'A26732', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/03/2024', 'A48999', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/09/2024', 'A73203', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/07/2024', 'A77619', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/02/2024', 'A48999', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/03/2024', 'A48999', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/06/2024', 'A84157', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/05/2024', 'A48999', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/07/2024', 'A90251', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/12/2023', 'A43576', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/06/2024', 'A03557', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/07/2024', 'A03557', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/11/2023', 'A26732', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/11/2023', 'A64078', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/09/2023', 'A27100', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/04/2024', 'A03557', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/01/2024', 'A03961', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/06/2024', 'A64078', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/06/2024', 'A71143', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/08/2024', 'A03961', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/01/2024', 'A60262', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/06/2024', 'A27100', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/06/2024', 'A73203', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/10/2023', 'A26732', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/07/2024', 'A84157', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/07/2024', 'A03961', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/08/2024', 'A90251', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/05/2024', 'A77619', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/02/2024', 'A64078', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/05/2024', 'A43576', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/10/2023', 'A03961', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/10/2023', 'A99200', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/12/2023', 'A48999', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/10/2023', 'A90251', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/08/2024', 'A71143', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/01/2024', 'A73203', 633670);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/06/2024', 'A03557', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/02/2024', 'A48999', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/05/2024', 'A99200', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/12/2023', 'A03557', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/10/2023', 'A84157', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/11/2023', 'A03961', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/04/2024', 'A64078', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/09/2023', 'A43576', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '09/11/2023', 'A48999', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/03/2024', 'A99200', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/11/2023', 'A03557', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/12/2023', 'A27100', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/12/2023', 'A27100', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/08/2024', 'A99200', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/01/2024', 'A03961', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/08/2024', 'A77619', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/03/2024', 'A26732', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/09/2023', 'A03557', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/01/2024', 'A60262', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/01/2024', 'A84157', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/09/2023', 'A90251', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/05/2024', 'A48999', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/09/2023', 'A77619', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/02/2024', 'A60262', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/08/2024', 'A99200', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/04/2024', 'A48999', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/02/2024', 'A99200', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/07/2024', 'A27100', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/10/2023', 'A64078', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/12/2023', 'A73203', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/04/2024', 'A90251', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/06/2024', 'A73203', 208234);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/01/2024', 'A43576', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/08/2024', 'A71143', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/06/2024', 'A84157', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/09/2024', 'A03961', 954511);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/04/2024', 'A27100', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/03/2024', 'A64078', 303843);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/11/2023', 'A71143', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '09/01/2024', 'A60262', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/02/2024', 'A64078', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/02/2024', 'A27100', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/06/2024', 'A60262', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/03/2024', 'A27100', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/08/2024', 'A60262', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '14/10/2023', 'A77619', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/06/2024', 'A84157', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/10/2023', 'A48999', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/12/2023', 'A77619', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/05/2024', 'A60262', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/02/2024', 'A03961', 613960);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/10/2023', 'A43576', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/05/2024', 'A90251', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/11/2023', 'A03961', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/02/2024', 'A99200', 642428);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/08/2024', 'A60262', 757104);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/05/2024', 'A99200', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/02/2024', 'A48999', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/01/2024', 'A43576', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/10/2023', 'A03557', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/11/2023', 'A77619', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/08/2024', 'A64078', 81766);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/04/2024', 'A99200', 343405);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/10/2023', 'A48999', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/06/2024', 'A84157', 312643);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/05/2024', 'A99200', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/05/2024', 'A84157', 0);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/05/2024', 'A77619', 948380);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/06/2024', 'A27100', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/10/2023', 'A26732', 581786);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/11/2023', 'A03557', 0);
-
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '14/02/2024', 'A26732', 907880);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/06/2024', 'A64078', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/12/2023', 'A48999', 238510);
-insert into Maintenance (maintenanceID, maintenanceDate, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/07/2024', 'A60262', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/11/2023',5109,'A43576', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/04/2024',7018,'A77619', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/05/2024',6293,'A90251', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/09/2023',5132,'A48999', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/03/2024',6643,'A90251', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/03/2024',7121,'A26732', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/07/2024',5501,'A60262', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/08/2024',4930,'A77619', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/05/2024',7833,'A99200', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/02/2024',6715,'A26732', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/08/2024',5625,'A03961', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/04/2024',3555,'A90251', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/04/2024',4489,'A73203', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/08/2024',3608,'A99200', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/06/2024',5331,'A43576', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/09/2023',8089,'A03961', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '09/08/2024',7790,'A71143', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/10/2023',6558,'A48999', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/10/2023',4992,'A84157', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '14/10/2023',4995,'A03557', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/08/2024',7934,'A48999', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/11/2023',7089,'A43576', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/01/2024',4764,'A43576', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/08/2024',4396,'A60262', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/10/2023',4618,'A26732', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/11/2023',4976,'A73203', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/05/2024',4756,'A27100', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/12/2023',5021,'A90251', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/11/2023',7876,'A27100', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/03/2024',3570,'A03557', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/12/2023',3002,'A99200', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/08/2024',8163,'A99200', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/12/2023',3978,'A90251', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/10/2023',3545,'A73203', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/09/2023',5344,'A90251', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/04/2024',4959,'A48999', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/08/2024',5456,'A60262', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/03/2024',4685,'A71143', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '03/05/2024',7507,'A84157', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/12/2023',7860,'A48999', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/05/2024',6480,'A71143', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/01/2024',8191,'A60262', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/03/2024',5363,'A27100', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/06/2024',3396,'A03961', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/10/2023',7506,'A26732', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/04/2024',7171,'A73203', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/09/2023',7301,'A99200', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/09/2023',8148,'A64078', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/02/2024',5753,'A84157', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/08/2024',6460,'A71143', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/09/2023',7430,'A48999', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/02/2024',6644,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/08/2024',4211,'A03961', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/08/2024',7410,'A43576', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/07/2024',5702,'A99200', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/09/2023',3866,'A03557', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/10/2023',7943,'A03961', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/10/2023',5084,'A90251', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/01/2024',6618,'A60262', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/03/2024',7649,'A18742', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/02/2024',3613,'A03961', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/02/2024',3766,'A03557', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/07/2024',3157,'A03961', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/12/2023',4110,'A90251', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/09/2023',7800,'A73203', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '14/06/2024',5223,'A26732', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/06/2024',5986,'A60262', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/03/2024',7883,'A18742', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/04/2024',6465,'A26732', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '09/12/2023',4447,'A71143', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/07/2024',5961,'A84157', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/09/2023',5871,'A84157', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '14/08/2024',7315,'A03961', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/05/2024',3518,'A64078', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/12/2023',3753,'A73203', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '03/07/2024',3822,'A43576', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/03/2024',4808,'A48999', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/10/2023',5906,'A73203', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/02/2024',4262,'A64078', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/01/2024',5790,'A84157', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/03/2024',8033,'A18742', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/05/2024',4657,'A26732', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/03/2024',5856,'A18742', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/07/2024',3723,'A48999', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/02/2024',7312,'A77619', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/07/2024',7490,'A77619', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/04/2024',7149,'A48999', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/02/2024',5263,'A03961', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/02/2024',5837,'A03557', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/07/2024',3553,'A18742', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/08/2024',5159,'A90251', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/05/2024',5188,'A84157', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/11/2023',3392,'A18742', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/09/2023',7741,'A71143', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/02/2024',4564,'A43576', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/03/2024',4142,'A64078', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/11/2023',3188,'A90251', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/08/2024',8091,'A90251', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/09/2023',4387,'A03961', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/11/2023',8125,'A73203', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/08/2024',4783,'A27100', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/11/2023',5870,'A90251', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/10/2023',4568,'A64078', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/04/2024',3676,'A99200', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/01/2024',5185,'A73203', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/02/2024',4551,'A73203', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/10/2023',7541,'A03557', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/12/2023',6345,'A03961', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/05/2024',6215,'A48999', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/11/2023',3113,'A64078', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/07/2024',6994,'A48999', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/03/2024',4895,'A03961', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '03/07/2024',6464,'A26732', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/05/2024',4789,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/04/2024',8361,'A64078', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/08/2024',5633,'A84157', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/08/2024',8433,'A64078', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/03/2024',3769,'A73203', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/09/2023',6364,'A03961', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/01/2024',7465,'A77619', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/01/2024',4946,'A71143', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/06/2024',6428,'A48999', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/06/2024',7540,'A64078', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/08/2024',6416,'A77619', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/10/2023',5732,'A84157', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/08/2024',4596,'A64078', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/07/2024',7754,'A48999', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/10/2023',5673,'A71143', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/03/2024',7067,'A71143', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/08/2024',7257,'A84157', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/01/2024',6271,'A43576', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/02/2024',5048,'A71143', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/01/2024',8132,'A48999', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/08/2024',4258,'A77619', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/05/2024',6904,'A73203', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/05/2024',7148,'A27100', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/11/2023',8424,'A84157', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/01/2024',3376,'A90251', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/11/2023',7538,'A03557', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/11/2023',4999,'A03961', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/07/2024',4864,'A71143', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/05/2024',5264,'A26732', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/08/2024',8498,'A48999', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/03/2024',5341,'A43576', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/05/2024',3539,'A99200', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/10/2023',5943,'A71143', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/03/2024',8312,'A03557', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/12/2023',3805,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/12/2023',5942,'A77619', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/11/2023',7857,'A73203', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/08/2024',3762,'A71143', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/06/2024',4662,'A43576', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/04/2024',6685,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/08/2024',7177,'A48999', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/04/2024',3394,'A48999', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/12/2023',3322,'A43576', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/12/2023',7314,'A27100', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/08/2024',3465,'A27100', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/10/2023',6941,'A48999', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/03/2024',6977,'A60262', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/12/2023',5803,'A43576', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '03/01/2024',8392,'A27100', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/01/2024',4949,'A48999', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/01/2024',3057,'A73203', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/05/2024',3121,'A03961', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/06/2024',6375,'A03557', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/03/2024',6036,'A71143', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/06/2024',5116,'A60262', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/09/2023',7884,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/05/2024',3003,'A90251', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '09/09/2023',6862,'A48999', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/08/2024',6863,'A60262', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/12/2023',7616,'A84157', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/11/2023',5728,'A77619', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/11/2023',7356,'A99200', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/11/2023',4876,'A26732', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/04/2024',5329,'A90251', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/07/2024',3573,'A90251', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/11/2023',3807,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/02/2024',7572,'A84157', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/09/2023',8321,'A48999', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/06/2024',6669,'A26732', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/07/2024',3805,'A60262', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/09/2023',5102,'A71143', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/07/2024',3778,'A73203', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/08/2024',6671,'A26732', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/01/2024',4304,'A03961', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/02/2024',5961,'A26732', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/05/2024',7777,'A73203', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/04/2024',6518,'A26732', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/03/2024',3912,'A48999', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/09/2024',3301,'A73203', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/07/2024',6218,'A77619', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/02/2024',3042,'A48999', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/03/2024',4391,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/06/2024',3062,'A84157', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/05/2024',7187,'A48999', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/07/2024',6455,'A90251', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/12/2023',3269,'A43576', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/06/2024',4481,'A03557', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/07/2024',4887,'A03557', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/11/2023',7824,'A26732', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/11/2023',6398,'A64078', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/09/2023',3887,'A27100', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/04/2024',8012,'A03557', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/01/2024',6237,'A03961', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '05/06/2024',3584,'A64078', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/06/2024',6661,'A71143', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/08/2024',7613,'A03961', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/01/2024',5063,'A60262', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/06/2024',8480,'A27100', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/06/2024',5551,'A73203', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/10/2023',8444,'A26732', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/07/2024',5784,'A84157', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/07/2024',6497,'A03961', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/08/2024',8307,'A90251', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/05/2024',3430,'A77619', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/02/2024',4243,'A64078', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/05/2024',4539,'A43576', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/10/2023',5225,'A03961', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/10/2023',6235,'A99200', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/12/2023',6698,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/10/2023',6199,'A90251', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/08/2024',5332,'A71143', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/01/2024',4900,'A73203', 633670);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/06/2024',6452,'A03557', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/02/2024',8015,'A48999', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/05/2024',8481,'A99200', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/12/2023',3808,'A03557', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/10/2023',3254,'A84157', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/11/2023',4447,'A03961', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/04/2024',6453,'A64078', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/09/2023',5147,'A43576', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '09/11/2023',5712,'A48999', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/03/2024',3790,'A99200', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/11/2023',6770,'A03557', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '21/12/2023',5495,'A27100', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/12/2023',6233,'A27100', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/08/2024',3909,'A99200', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/01/2024',6576,'A03961', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/08/2024',3829,'A77619', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/03/2024',3932,'A26732', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/09/2023',4765,'A03557', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/01/2024',6980,'A60262', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/01/2024',7542,'A84157', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/09/2023',7863,'A90251', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/05/2024',4257,'A48999', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/09/2023',6142,'A77619', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/02/2024',4083,'A60262', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/08/2024',3090,'A99200', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/04/2024',5139,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/02/2024',4644,'A99200', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/07/2024',3772,'A27100', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/10/2023',3520,'A64078', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '24/12/2023',6011,'A73203', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '15/04/2024',7237,'A90251', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '30/06/2024',4353,'A73203', 208234);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/01/2024',5764,'A43576', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/08/2024',3776,'A71143', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/06/2024',7184,'A84157', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '01/09/2024',5468,'A03961', 954511);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/04/2024',7875,'A27100', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/03/2024',5462,'A64078', 303843);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/11/2023',6343,'A71143', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '09/01/2024',6465,'A60262', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '26/02/2024',7004,'A64078', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '19/02/2024',8333,'A27100', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/06/2024',7539,'A60262', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/03/2024',3408,'A27100', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/08/2024',5795,'A60262', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '14/10/2023',4000,'A77619', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '23/06/2024',3501,'A84157', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/10/2023',5021,'A48999', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/12/2023',5959,'A77619', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/05/2024',5600,'A60262', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '07/02/2024',3094,'A03961', 613960);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/10/2023',3992,'A43576', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '25/05/2024',6172,'A90251', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/11/2023',4452,'A03961', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/02/2024',8170,'A99200', 642428);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '04/08/2024',4506,'A60262', 757104);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '16/05/2024',8071,'A99200', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/02/2024',3333,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '22/01/2024',5746,'A43576', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '18/10/2023',3321,'A03557', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '20/11/2023',7644,'A77619', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '11/08/2024',4457,'A64078', 81766);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '27/04/2024',7260,'A99200', 343405);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '06/10/2023',8249,'A48999', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '17/06/2024',5783,'A84157', 312643);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '02/05/2024',4011,'A99200', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/05/2024',3315,'A84157', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '29/05/2024',6561,'A77619', 948380);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '10/06/2024',8032,'A27100', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '28/10/2023',3804,'A26732', 581786);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '12/11/2023',7142,'A03557', 0);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '14/02/2024',3870,'A26732', 907880);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '13/06/2024',4597,'A64078', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '31/12/2023',4437,'A48999', 238510);
+insert into Maintenance (maintenanceID, maintenanceDate, maintenanceFee, airplaneID, partID) values ('MT' || LPAD(maintenance_id_seq.NEXTVAL, 5, '0'), '08/07/2024',7021,'A60262', 0);
 
 
 --INSERT PURCHASE
@@ -8310,7 +8247,7 @@ insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, pri
 insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, price, status, depatureSchedule, returnSchedule, seatNumber,airplaneID,purchaseID,policyID) values ('BD' || LPAD(bookingdetails_id_seq.NEXTVAL, 5, '0'),'B00996','P00996',2, 1131, 'sucess', 'FS00066', 'FS00071', 27,'A99200','PC00045','PO00018');
 insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, price, status, depatureSchedule, returnSchedule, seatNumber,airplaneID,purchaseID,policyID) values ('BD' || LPAD(bookingdetails_id_seq.NEXTVAL, 5, '0'),'B00997','P00997',2, 1177, 'sucess', 'FS00066', 'FS00071', 28,'A99200','PC00065','PO00009');
 insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, price, status, depatureSchedule, returnSchedule, seatNumber,airplaneID,purchaseID,policyID) values ('BD' || LPAD(bookingdetails_id_seq.NEXTVAL, 5, '0'),'B00998','P00998',2, 1061, 'sucess', 'FS00066', 'FS00071', 29,'A60262','PC00007','PO00078');
-insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, price, status, depatureSchedule, returnSchedule, seatNumber,airplaneID,purchaseID,policyID) values ('BD' || LPAD(bookingdetails_id_seq.NEXTVAL, 5, '0'),'B00999','P00001',2, 1146, 'sucess', 'FS00066', 'FS00071', 30,'A84157','PC00022','PO00079');
+insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, price, status, depatureSchedule, returnSchedule, seatNumber,airplaneID,purchaseID,policyID) values ('BD' || LPAD(bookingdetails_id_seq.NEXTVAL, 5, '0'),'B00999','P00999',2, 1146, 'sucess', 'FS00066', 'FS00071', 30,'A84157','PC00022','PO00079');
 
 SELECT 'Member' AS TableName, COUNT(*) AS RowCount FROM Member
 UNION ALL
