@@ -8310,7 +8310,7 @@ insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, pri
 insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, price, status, depatureSchedule, returnSchedule, seatNumber,airplaneID,purchaseID,policyID) values ('BD' || LPAD(bookingdetails_id_seq.NEXTVAL, 5, '0'),'B00996','P00996',2, 1131, 'sucess', 'FS00066', 'FS00071', 27,'A99200','PC00045','PO00018');
 insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, price, status, depatureSchedule, returnSchedule, seatNumber,airplaneID,purchaseID,policyID) values ('BD' || LPAD(bookingdetails_id_seq.NEXTVAL, 5, '0'),'B00997','P00997',2, 1177, 'sucess', 'FS00066', 'FS00071', 28,'A99200','PC00065','PO00009');
 insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, price, status, depatureSchedule, returnSchedule, seatNumber,airplaneID,purchaseID,policyID) values ('BD' || LPAD(bookingdetails_id_seq.NEXTVAL, 5, '0'),'B00998','P00998',2, 1061, 'sucess', 'FS00066', 'FS00071', 29,'A60262','PC00007','PO00078');
-insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, price, status, depatureSchedule, returnSchedule, seatNumber,airplaneID,purchaseID,policyID) values ('BD' || LPAD(bookingdetails_id_seq.NEXTVAL, 5, '0'),'B00999','P00999',2, 1146, 'sucess', 'FS00066', 'FS00071', 30,'A84157','PC00022','PO00079');
+insert into BookingDetails (bookingdetailsID, bookingID, passengerID, wayID, price, status, depatureSchedule, returnSchedule, seatNumber,airplaneID,purchaseID,policyID) values ('BD' || LPAD(bookingdetails_id_seq.NEXTVAL, 5, '0'),'B00999','P00001',2, 1146, 'sucess', 'FS00066', 'FS00071', 30,'A84157','PC00022','PO00079');
 
 SELECT 'Member' AS TableName, COUNT(*) AS RowCount FROM Member
 UNION ALL
