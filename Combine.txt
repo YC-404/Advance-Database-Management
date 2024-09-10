@@ -2,6 +2,7 @@ DROP TABLE BookingDetails;
 DROP TABLE WorkAllocation;
 DROP TABLE Purchase;
 DROP TABLE Luggage;
+DROP TABLE PurchaseLog;
 
 DROP TABLE Maintenance;
 DROP TABLE InsuranceClaim;
@@ -196,6 +197,7 @@ DROP SEQUENCE flightschedule_id_seq;
 DROP SEQUENCE maintenance_id_seq;
 DROP SEQUENCE allocation_id_seq;
 DROP SEQUENCE luggage_id_seq;
+DROP SEQUENCE PurchaseLog_seq;
 DROP SEQUENCE policy_id_seq;
 DROP SEQUENCE insuranceclaim_id_seq;
 DROP SEQUENCE purchase_id_seq;
