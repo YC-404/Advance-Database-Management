@@ -1,0 +1,32 @@
+SET linesize 150
+SET pagesize 35
+
+TTITLE LEFT 'Top 10 Members with Most Frequent Purchases in a Specific Time Period'
+
+ACCEPT v_startDate DATE FORMAT 'DD/MM/YYYY' PROMPT 'Enter start date (e.g., 01/08/2023): '
+ACCEPT v_endDate DATE FORMAT 'DD/MM/YYYY' PROMPT 'Enter end date (e.g., 01/08/2024): '
+
+COLUMN "Member ID" FORMAT A10 HEADING "Member ID"
+COLUMN "Member Name" FORMAT A30 HEADING "Member Name"
+COLUMN "Number of Purchases" FORMAT 999 HEADING "Number of Purchases"
+
+SELECT * FROM (
+    SELECT 
+        M.memberID AS "Member ID",
+        M.memberName AS "Member Name",
+        COUNT(P.purchaseID) AS "Number of Purchases"
+    FROM 
+        Member M
+    JOIN 
+        Booking B ON M.memberID = B.memberID
+    JOIN 
+        Purchase P ON B.bookingID = P.bookingID
+    WHERE 
+        TO_DATE(B.bookingDate, 'DD/MM/YYYY') BETWEEN TO_DATE('&v_startDate', 'DD/MM/YYYY') 
+        AND TO_DATE('&v_endDate', 'DD/MM/YYYY')
+    GROUP BY 
+        M.memberID, M.memberName
+    ORDER BY 
+        COUNT(P.purchaseID) DESC
+)
+WHERE ROWNUM <= 10;

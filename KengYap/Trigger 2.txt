@@ -1,0 +1,49 @@
+CREATE SEQUENCE PurchaseLog_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE;
+
+CREATE TABLE PurchaseLog (
+    logID NUMBER,
+    purchaseID CHAR(7),
+    itemID CHAR(7),
+    bookingID CHAR(7),
+    passengerID CHAR(7),
+    action_type VARCHAR(10),
+    action_date DATE,
+    PRIMARY KEY (logID)
+);
+
+CREATE OR REPLACE TRIGGER PurchaseLog_trigger
+BEFORE INSERT ON PurchaseLog
+FOR EACH ROW
+BEGIN
+    :NEW.logID := PurchaseLog_seq.NEXTVAL;
+END;
+/
+
+
+CREATE OR REPLACE TRIGGER log_purchase_changes
+AFTER INSERT OR UPDATE OR DELETE ON Purchase
+FOR EACH ROW
+BEGIN
+    CASE 
+        WHEN INSERTING THEN
+            INSERT INTO PurchaseLog
+            (purchaseID, itemID, bookingID, passengerID, action_type, action_date)
+            VALUES (:NEW.purchaseID, :NEW.itemID, :NEW.bookingID, :NEW.passengerID, 'INSERT', SYSDATE);
+        WHEN UPDATING THEN
+            INSERT INTO PurchaseLog
+            (purchaseID, itemID, bookingID, passengerID, action_type, action_date)
+            VALUES (:OLD.purchaseID, :NEW.itemID, :NEW.bookingID, :NEW.passengerID, 'UPDATE', SYSDATE);
+        WHEN DELETING THEN
+            INSERT INTO PurchaseLog
+            (purchaseID, itemID, bookingID, passengerID, action_type, action_date)
+            VALUES (:OLD.purchaseID, :OLD.itemID, :OLD.bookingID, :OLD.passengerID, 'DELETE', SYSDATE);
+    END CASE;
+END;
+/
+insert into Purchase (purchaseID, quantity, itemID, bookingID, passengerID) 
+values ('PC' || LPAD(purchase_id_seq.NEXTVAL, 5, '0'), 7, 'I00006', 'B00015', 'P00003');
+
+SELECT * FROM PurchaseLog;

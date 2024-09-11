@@ -1,0 +1,71 @@
+SET LINESIZE 350
+SET PAGESIZE 80
+SET SERVEROUTPUT ON;
+
+COLUMN passengerID FORMAT a10 HEADING "Passenger ID";
+COLUMN passengerName FORMAT a25 HEADING "Passenger Name";
+COLUMN Total_Items HEADING "Total Items Purchased";
+COLUMN Total_Amount FORMAT $99,9999.99 HEADING "Total Amount (RM)";
+COLUMN Average_Spend FORMAT $99,9999.99 HEADING "Average Spend (RM)";
+COLUMN itemName FORMAT a25 HEADING "Item Name";
+COLUMN quantity HEADING "Quantity";
+
+TTITLE LEFT 'Passenger Purchase History and Total Spending';
+
+DECLARE
+    CURSOR cur_passenger_purchase IS
+        SELECT 
+            p.passengerID,
+            p.passengerName,
+            COUNT(pr.purchaseID) AS Total_Items,
+            SUM(pr.quantity * i.itemPrice) AS Total_Amount,
+            ROUND(AVG(pr.quantity * i.itemPrice), 2) AS Average_Spend,
+            i.itemName,
+            pr.quantity
+        FROM 
+            Passenger p
+        JOIN 
+            Purchase pr ON p.passengerID = pr.passengerID
+        JOIN 
+            Item i ON pr.itemID = i.itemID
+        GROUP BY 
+            p.passengerID, p.passengerName, i.itemName, pr.quantity
+        ORDER BY 
+            Total_Amount DESC;
+
+    v_passengerID VARCHAR2(10);
+    v_passengerName VARCHAR2(25);
+    v_total_items NUMBER;
+    v_total_amount NUMBER;
+    v_average_spend NUMBER;
+    v_item_name VARCHAR2(25);
+    v_quantity NUMBER;
+
+BEGIN
+    -- Open the cursor
+    OPEN cur_passenger_purchase;
+    
+    -- Display headers for the report
+    DBMS_OUTPUT.PUT_LINE(RPAD('Passenger ID', 15) || RPAD('Passenger Name', 30) || 
+                         RPAD('Total Items Purchased', 25) || RPAD('Total Amount (RM)', 25) || 
+                         RPAD('Average Spend (RM)', 25) || RPAD('Item Name', 25) || 'Quantity');
+    
+    DBMS_OUTPUT.PUT_LINE('--------------------------------------------------------------------------------------------------------------------------------------------------------------');
+    
+    -- Loop through the cursor and fetch each row
+    LOOP
+        FETCH cur_passenger_purchase INTO v_passengerID, v_passengerName, v_total_items, v_total_amount, v_average_spend, v_item_name, v_quantity;
+        EXIT WHEN cur_passenger_purchase%NOTFOUND;
+        
+        -- Display each record
+        DBMS_OUTPUT.PUT_LINE(RPAD(v_passengerID, 15) || RPAD(v_passengerName, 30) || 
+                             RPAD(TO_CHAR(v_total_items), 25) || 
+                             RPAD(TO_CHAR(v_total_amount, '999,9999.99'), 25) || 
+                             RPAD(TO_CHAR(v_average_spend, '999,9999.99'), 25) || 
+                             RPAD(v_item_name, 25) || v_quantity);
+    END LOOP;
+    
+    -- Close the cursor
+    CLOSE cur_passenger_purchase;
+END;
+/

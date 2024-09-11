@@ -1,0 +1,30 @@
+SET LINESIZE 150
+SET PAGESIZE 35
+
+COLUMN MemberID FORMAT a12 HEADING "Member ID"
+COLUMN MemberName FORMAT a30 HEADING "Member Name"
+COLUMN PurchaseCount HEADING "Number of Purchases"
+COLUMN TotalSpent FORMAT $99,9999.99 HEADING "Total Spent (RM)"
+
+TTITLE LEFT 'Top 10 Members with Highest Purchases'
+
+SELECT * FROM (
+    SELECT 
+        M.memberID, 
+        M.memberName, 
+        COUNT(P.purchaseID) AS PurchaseCount, 
+        SUM(P.quantity * I.itemPrice) AS TotalSpent
+    FROM 
+        Member M
+    JOIN 
+        Booking B ON M.memberID = B.memberID
+    JOIN 
+        Purchase P ON B.bookingID = P.bookingID
+    JOIN 
+        Item I ON P.itemID = I.itemID
+    GROUP BY 
+        M.memberID, M.memberName
+    ORDER BY 
+        TotalSpent DESC
+)
+WHERE ROWNUM <= 10;

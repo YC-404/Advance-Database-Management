@@ -1,0 +1,28 @@
+CREATE OR REPLACE TRIGGER CheckItemStock
+BEFORE INSERT ON Purchase
+FOR EACH ROW
+DECLARE
+    v_itemStock NUMBER;
+BEGIN
+    -- Check item stock
+    SELECT itemStock INTO v_itemStock 
+    FROM Item 
+    WHERE itemID = :NEW.itemID;
+
+    IF v_itemStock < :NEW.quantity THEN
+        RAISE_APPLICATION_ERROR(-20002, 'Not enough stock for this item.');
+    END IF;
+
+    -- Decrease stock
+    UPDATE Item
+    SET itemStock = itemStock - :NEW.quantity
+    WHERE itemID = :NEW.itemID;
+END;
+/
+SELECT itemStock FROM Item WHERE itemID = 'I00001';
+
+INSERT INTO Purchase (purchaseID, quantity, itemID, bookingID, passengerID)
+VALUES ('PC01000', 99, 'I00001', 'B00001', 'P00001');
+
+INSERT INTO Purchase (purchaseID, quantity, itemID, bookingID, passengerID)
+VALUES ('PC01100', 99, 'I00001', 'B00001', 'P00001');

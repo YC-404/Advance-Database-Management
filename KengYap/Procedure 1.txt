@@ -1,0 +1,32 @@
+CREATE OR REPLACE PROCEDURE CalculateAirplaneRevenue(
+    p_startDate IN DATE, 
+    p_endDate IN DATE
+)
+IS
+BEGIN
+    DBMS_OUTPUT.PUT_LINE(RPAD('=', 100, '='));
+    DBMS_OUTPUT.PUT_LINE('Airplane Revenue from ' || TO_CHAR(p_startDate, 'DD-MON-YYYY') || ' to ' || TO_CHAR(p_endDate, 'DD-MON-YYYY'));
+    DBMS_OUTPUT.PUT_LINE(RPAD('=', 100, '='));
+
+    FOR rec IN (
+        SELECT 
+            A.airplaneID,
+            A.model,
+            SUM(BD.price) AS TotalRevenue
+        FROM 
+            Airplane A
+            JOIN FlightSchedule FS ON A.airplaneID = FS.airplaneID
+            JOIN BookingDetails BD ON FS.flightScheduleID = BD.depatureSchedule
+        WHERE 
+            FS.flightDate BETWEEN p_startDate AND p_endDate
+        GROUP BY A.airplaneID, A.model
+        ORDER BY TotalRevenue DESC
+    ) 
+    LOOP
+        DBMS_OUTPUT.PUT_LINE(RPAD(rec.airplaneID, 12) || RPAD(rec.model, 20) || rec.TotalRevenue);
+    END LOOP;
+END;
+/
+SET SERVEROUTPUT ON;
+
+EXEC CalculateAirplaneRevenue(TO_DATE('01-JAN-2023', 'DD-MON-YYYY'), TO_DATE('31-DEC-2023', 'DD-MON-YYYY'));

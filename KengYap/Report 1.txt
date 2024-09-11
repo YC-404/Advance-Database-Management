@@ -1,0 +1,67 @@
+SET LINESIZE 120
+SET PAGESIZE 35
+SET SERVEROUTPUT ON;
+
+COLUMN flightID FORMAT a12 HEADING "Flight ID";
+COLUMN destination FORMAT a25 HEADING "Destination";
+COLUMN gender FORMAT a10 HEADING "Gender";
+COLUMN age_group FORMAT a12 HEADING "Age Group";
+COLUMN passenger_count HEADING "Passenger Count";
+
+TTITLE CENTER 'Passenger Demographics by Flight'
+
+DECLARE
+    CURSOR cur_passenger_demographics IS
+        SELECT 
+            fs.flightScheduleID AS flightID,
+            fs.destination,
+            p.gender,
+            CASE 
+                WHEN MONTHS_BETWEEN(SYSDATE, p.dOB) / 12 < 18 THEN 'Child'
+                WHEN MONTHS_BETWEEN(SYSDATE, p.dOB) / 12 BETWEEN 18 AND 65 THEN 'Adult'
+                ELSE 'Senior'
+            END AS age_group,
+            COUNT(p.passengerID) AS passenger_count
+        FROM 
+            Passenger p
+        JOIN 
+            BookingDetails bd ON p.passengerID = bd.passengerID
+        JOIN 
+            FlightSchedule fs ON bd.depatureSchedule = fs.flightScheduleID
+        GROUP BY 
+            fs.flightScheduleID, fs.destination, p.gender, 
+            CASE 
+                WHEN MONTHS_BETWEEN(SYSDATE, p.dOB) / 12 < 18 THEN 'Child'
+                WHEN MONTHS_BETWEEN(SYSDATE, p.dOB) / 12 BETWEEN 18 AND 65 THEN 'Adult'
+                ELSE 'Senior'
+            END
+        ORDER BY 
+            fs.flightScheduleID;
+
+    v_flightID VARCHAR2(12);
+    v_destination VARCHAR2(25);
+    v_gender VARCHAR2(10);
+    v_age_group VARCHAR2(12);
+    v_passenger_count NUMBER;
+
+BEGIN
+    OPEN cur_passenger_demographics;
+    
+    -- Header for the output
+    DBMS_OUTPUT.PUT_LINE(RPAD('Flight ID', 12) || RPAD('Destination', 25) || 
+                         RPAD('Gender', 10) || RPAD('Age Group', 12) || 'Passenger Count');
+    DBMS_OUTPUT.PUT_LINE('--------------------------------------------------------------');
+
+    LOOP
+        FETCH cur_passenger_demographics INTO v_flightID, v_destination, v_gender, v_age_group, v_passenger_count;
+        EXIT WHEN cur_passenger_demographics%NOTFOUND;
+        
+        -- Formatting the output with fixed width for each column
+        DBMS_OUTPUT.PUT_LINE(RPAD(v_flightID, 12) || RPAD(v_destination, 25) || 
+                             RPAD(v_gender, 10) || RPAD(v_age_group, 12) || 
+                             v_passenger_count);
+    END LOOP;
+    
+    CLOSE cur_passenger_demographics;
+END;
+/
