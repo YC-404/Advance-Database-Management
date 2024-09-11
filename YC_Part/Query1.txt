@@ -1,0 +1,49 @@
+SET linesize 120;
+SET pagesize 100;
+
+CREATE OR REPLACE VIEW MostOrderedItemPerFlight AS
+WITH ItemOrders AS (
+    SELECT
+        i.itemID,
+        i.itemName,
+        SUM(p.quantity) AS totalQuantity,
+        SUM(p.quantity * i.itemPrice) AS totalAmount,
+        bd.depatureSchedule AS flightScheduleID
+    FROM Purchase p
+    JOIN Item i ON p.itemID = i.itemID
+    JOIN BookingDetails bd ON p.bookingID = bd.bookingID
+    GROUP BY i.itemID, i.itemName, bd.depatureSchedule
+),
+MostOrderedItem AS (
+    SELECT
+        flightScheduleID,
+        itemID,
+        itemName,
+        totalQuantity,
+        totalAmount,
+        RANK() OVER (PARTITION BY flightScheduleID ORDER BY totalQuantity DESC) AS rankOrder
+    FROM ItemOrders
+)
+SELECT
+    fs.flightScheduleID AS "FLIGHTS",
+    fs.origin AS "ORIGIN",
+    fs.destination AS "DESTINATION",
+    mo.itemName AS "MOST ORDERED ITEM",
+    mo.totalQuantity AS "ORDER AMOUNT",
+    mo.totalAmount AS "TOTAL SELLING AMOUNT"
+FROM MostOrderedItem mo
+JOIN FlightSchedule fs ON mo.flightScheduleID = fs.flightScheduleID
+WHERE mo.rankOrder = 1;
+
+
+-- Set column formatting to ensure headers fit on one line
+COLUMN "FLIGHTS" FORMAT A10;
+COLUMN "ORIGIN" FORMAT A15;
+COLUMN "DESTINATION" FORMAT A15;
+COLUMN "MOST ORDERED ITEM" FORMAT A20;
+COLUMN "ORDER AMOUNT" FORMAT 999;
+COLUMN "TOTAL SELLING AMOUNT" FORMAT 999999.99;
+
+-- Query the view
+SELECT * FROM MostOrderedItemPerFlight;
+

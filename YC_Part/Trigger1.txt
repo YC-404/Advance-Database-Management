@@ -1,0 +1,24 @@
+CREATE OR REPLACE TRIGGER prevent_overbooking
+BEFORE INSERT OR UPDATE ON BookingDetails
+FOR EACH ROW
+DECLARE
+    airplane_capacity NUMBER;
+    passengers_on_flight NUMBER;
+BEGIN
+    -- Get the airplane's capacity
+    SELECT capacity INTO airplane_capacity
+    FROM Airplane
+    WHERE airplaneID = :NEW.airplaneID;
+
+    -- Count the current passengers on the flight
+    SELECT COUNT(*) INTO passengers_on_flight
+    FROM BookingDetails
+    WHERE depatureSchedule = :NEW.depatureSchedule
+    AND airplaneID = :NEW.airplaneID;
+
+    -- If the passengers exceed the capacity, raise an error
+    IF passengers_on_flight >= airplane_capacity THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Airplane capacity exceeded, cannot book more passengers.');
+    END IF;
+END;
+/

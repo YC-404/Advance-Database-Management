@@ -1,0 +1,99 @@
+SET serveroutput ON
+SET linesize 120
+SET pagesize 100
+ALTER SESSION SET NLS_DATE_FORMAT = 'DD/MM/YYYY';
+
+CREATE OR REPLACE PROCEDURE Monthly_Passenger_Report
+IS
+    CURSOR monthly_passenger_cursor IS
+        SELECT
+            TO_CHAR(b.bookingDate, 'YYYY-MM') AS month_year,
+            COUNT(p.passengerID) AS passenger_count,
+            SUM(bd.price) AS total_revenue
+        FROM
+            Booking b
+            JOIN BookingDetails bd ON b.bookingID = bd.bookingID
+            JOIN Passenger p ON bd.passengerID = p.passengerID
+        WHERE
+            b.bookingDate BETWEEN DATE '2024-01-01' AND DATE '2024-12-31'
+        GROUP BY
+            TO_CHAR(b.bookingDate, 'YYYY-MM')
+        ORDER BY
+            TO_CHAR(b.bookingDate, 'YYYY-MM');
+
+    CURSOR passenger_breakdown_cursor IS
+        SELECT
+            TO_CHAR(b.bookingDate, 'YYYY-MM') AS month_year,
+            f.model AS flight_model,
+            COUNT(p.passengerID) AS passenger_count
+        FROM
+            Booking b
+            JOIN BookingDetails bd ON b.bookingID = bd.bookingID
+            JOIN Passenger p ON bd.passengerID = p.passengerID
+            JOIN FlightSchedule fs ON b.bookingID = fs.flightScheduleID
+            JOIN Airplane f ON fs.airplaneID = f.airplaneID
+        WHERE
+            b.bookingDate BETWEEN DATE '2024-01-01' AND DATE '2024-12-31'
+        GROUP BY
+            TO_CHAR(b.bookingDate, 'YYYY-MM'),
+            f.model
+        ORDER BY
+            TO_CHAR(b.bookingDate, 'YYYY-MM'),
+            f.model;
+
+    v_monthly_record monthly_passenger_cursor%ROWTYPE;
+    v_breakdown_record passenger_breakdown_cursor%ROWTYPE;
+
+    -- Variables to hold total passenger count, total revenue, and number of months
+    total_passenger_count NUMBER := 0;
+    total_revenue NUMBER := 0;
+    total_months NUMBER := 0;
+
+    -- Variables for average calculation
+    avg_passenger_count NUMBER := 0;
+    avg_revenue NUMBER := 0;
+BEGIN
+    -- Display the report header
+    DBMS_OUTPUT.PUT_LINE('Monthly Passenger Boarding Report');
+    DBMS_OUTPUT.PUT_LINE('Date Range: January 2024 to December 2024');
+    DBMS_OUTPUT.PUT_LINE('Generated On: ' || TO_CHAR(SYSDATE, 'DD/MM/YYYY'));
+    DBMS_OUTPUT.PUT_LINE('--------------------------------------------------------');
+    DBMS_OUTPUT.PUT_LINE('Year-Month | Passenger Count | Total Revenue');
+    DBMS_OUTPUT.PUT_LINE('--------------------------------------------------------');
+
+    -- Display the main report
+    OPEN monthly_passenger_cursor;
+    LOOP
+        FETCH monthly_passenger_cursor INTO v_monthly_record;
+        EXIT WHEN monthly_passenger_cursor%NOTFOUND;
+
+        DBMS_OUTPUT.PUT_LINE(v_monthly_record.month_year || '    |       ' || LPAD(v_monthly_record.passenger_count, 2, '0') || '        |   ' || v_monthly_record.total_revenue);
+
+        -- Accumulate totals
+        total_passenger_count := total_passenger_count + v_monthly_record.passenger_count;
+        total_revenue := total_revenue + v_monthly_record.total_revenue;
+        total_months := total_months + 1;  -- Count the number of months
+    END LOOP;
+    CLOSE monthly_passenger_cursor;
+
+    -- Calculate averages
+    IF total_months > 0 THEN
+        avg_passenger_count := total_passenger_count / total_months;
+        avg_revenue := total_revenue / total_months;
+    END IF;
+
+    -- Display the totals and averages
+    DBMS_OUTPUT.PUT_LINE('--------------------------------------------------------');
+    DBMS_OUTPUT.PUT_LINE('TOTAL      |       ' || LPAD(total_passenger_count, 3, '0') || '       |   ' || total_revenue);
+    DBMS_OUTPUT.PUT_LINE('--------------------------------------------------------');
+    DBMS_OUTPUT.PUT_LINE('AVERAGE    |       ' || ROUND(avg_passenger_count) || '        |   ' || ROUND(avg_revenue, 2));
+    DBMS_OUTPUT.PUT_LINE('--------------------------------------------------------');
+    DBMS_OUTPUT.PUT_LINE('End of Report');
+END;
+/
+
+
+BEGIN
+    Monthly_Passenger_Report;
+END;
+/

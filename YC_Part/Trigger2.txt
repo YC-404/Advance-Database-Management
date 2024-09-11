@@ -1,0 +1,23 @@
+CREATE OR REPLACE TRIGGER trg_CheckFlightAvailability
+BEFORE INSERT ON BookingDetails
+FOR EACH ROW
+DECLARE
+    v_planeStatus VARCHAR(11);
+BEGIN
+    -- Check the plane status for the flight
+    SELECT planeStatus
+    INTO v_planeStatus
+    FROM FlightSchedule
+    JOIN Airplane ON FlightSchedule.airplaneID = Airplane.airplaneID
+    WHERE FlightSchedule.flightScheduleID = :NEW.depatureSchedule
+      AND Airplane.airplaneID = :NEW.airplaneID;
+
+    -- Raise an error if the plane is unavailable
+    IF v_planeStatus = 'Unavailable' THEN
+        RAISE_APPLICATION_ERROR(-20002, 'The airplane for the selected flight schedule is unavailable.');
+    END IF;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        RAISE_APPLICATION_ERROR(-20003, 'No matching flight schedule or airplane found.');
+END;
+/

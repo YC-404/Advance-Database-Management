@@ -1,0 +1,78 @@
+SET serveroutput ON
+SET linesize 120
+SET pagesize 100
+
+SET SERVEROUTPUT ON
+SET LINESIZE 120
+SET PAGESIZE 100
+
+CREATE OR REPLACE PROCEDURE generate_member_booking_report(p_year IN NUMBER) IS
+  -- Variables to hold member details and aggregation results
+  v_memberID CHAR(7);
+  v_memberName VARCHAR(100);
+  v_memberEmail VARCHAR(100);
+  v_booking_count NUMBER;
+  v_total_amount NUMBER(10, 2);
+
+  -- Cursor to fetch members with their booking statistics for the given year
+  CURSOR member_cursor IS
+    WITH member_bookings AS (
+      SELECT b.memberID, m.memberName, m.memberEmail,
+             COUNT(*) AS booking_count, NVL(SUM(b.totalAmount), 0) AS total_amount
+      FROM Booking b
+      JOIN Member m ON b.memberID = m.memberID
+      WHERE EXTRACT(YEAR FROM b.bookingDate) = p_year
+      GROUP BY b.memberID, m.memberName, m.memberEmail
+    )
+    SELECT memberID, memberName, memberEmail, booking_count, total_amount
+    FROM member_bookings
+    ORDER BY total_amount DESC;
+
+BEGIN
+  -- Open member cursor
+  OPEN member_cursor;
+  
+  DBMS_OUTPUT.PUT_LINE('=======================================================================================');
+  DBMS_OUTPUT.PUT_LINE('          Member Booking Report for Year ' || p_year);
+  DBMS_OUTPUT.PUT_LINE('=======================================================================================');
+  DBMS_OUTPUT.PUT_LINE(RPAD('Member ID', 10) || RPAD('Member Name', 20) || RPAD('Email', 35) || RPAD('Bookings', 10) || 'Total Amount');
+  DBMS_OUTPUT.PUT_LINE('---------------------------------------------------------------------------------------');
+
+  LOOP
+    -- Fetch each member's booking stats
+    FETCH member_cursor INTO v_memberID, v_memberName, v_memberEmail, v_booking_count, v_total_amount;
+    EXIT WHEN member_cursor%NOTFOUND;
+
+    -- Print member details with booking count and total amount
+    DBMS_OUTPUT.PUT_LINE(RPAD(v_memberID, 10) || RPAD(v_memberName, 20) || RPAD(v_memberEmail, 35) || RPAD(v_booking_count, 10) || 'RM' || TO_CHAR(v_total_amount, 'FM9999990.00'));
+  END LOOP;
+  
+  -- Close member cursor
+  CLOSE member_cursor;
+
+  DBMS_OUTPUT.PUT_LINE('======================================================================================');
+  DBMS_OUTPUT.PUT_LINE('Report generation completed.');
+  DBMS_OUTPUT.PUT_LINE('======================================================================================');
+
+END generate_member_booking_report;
+/
+
+
+-- Turn on server output
+SET SERVEROUTPUT ON;
+
+-- Prompt user for year
+ACCEPT year_prompt NUMBER PROMPT 'Enter the year for the report: ';
+
+-- Execute procedure with user input
+EXECUTE generate_member_booking_report(&year_prompt);
+
+
+-- Turn on server output
+SET SERVEROUTPUT ON;
+
+-- Prompt user for year
+ACCEPT year_prompt NUMBER PROMPT 'Enter the year for the report: ';
+
+-- Execute procedure with user input
+EXECUTE generate_member_booking_report(&year_prompt);

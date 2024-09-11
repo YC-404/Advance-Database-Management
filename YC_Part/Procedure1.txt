@@ -1,0 +1,73 @@
+SET PAGESIZE 120
+SET LINESIZE 100
+
+CREATE OR REPLACE PROCEDURE prc_CalculateAvgDailyBoarding
+(
+    p_startDate IN VARCHAR2,
+    p_endDate IN VARCHAR2
+) AS
+    v_startDate DATE;
+    v_endDate DATE;
+    v_avgBoarding NUMBER;
+    v_totalDays NUMBER;
+BEGIN
+    -- Convert VARCHAR2 to DATE and validate date format
+    BEGIN
+        v_startDate := TO_DATE(p_startDate, 'DD/MM/YYYY');
+        v_endDate := TO_DATE(p_endDate, 'DD/MM/YYYY');
+    EXCEPTION
+        WHEN VALUE_ERROR THEN
+            RAISE_APPLICATION_ERROR(-20004, 'Invalid date format. Please use DD/MM/YYYY.');
+        WHEN OTHERS THEN
+            RAISE_APPLICATION_ERROR(-20004, 'Error converting date. Please ensure the format is DD/MM/YYYY.');
+    END;
+
+    -- Validate date range
+    IF v_startDate > v_endDate THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Start date cannot be after end date.');
+    END IF;
+
+    -- Calculate the average number of passengers boarding per day within the date range
+    BEGIN
+        SELECT CEIL(AVG(daily_passenger_count)) INTO v_avgBoarding
+        FROM (
+            SELECT FlightSchedule.flightDate, COUNT(DISTINCT BookingDetails.passengerID) AS daily_passenger_count
+            FROM BookingDetails
+            JOIN FlightSchedule ON BookingDetails.depatureSchedule = FlightSchedule.flightScheduleID
+            WHERE FlightSchedule.flightDate BETWEEN v_startDate AND v_endDate
+            GROUP BY FlightSchedule.flightDate
+        );
+    EXCEPTION
+        WHEN NO_DATA_FOUND THEN
+            v_avgBoarding := 0;
+        WHEN OTHERS THEN
+            RAISE_APPLICATION_ERROR(-20002, 'Error calculating average daily boarding: ' || SQLERRM);
+    END;
+
+    -- Calculate the total number of days in the range
+    v_totalDays := v_endDate - v_startDate + 1;
+
+    -- Display the results
+    DBMS_OUTPUT.PUT_LINE('Date Range: ' || TO_CHAR(v_startDate, 'DD/MM/YYYY') || ' to ' || TO_CHAR(v_endDate, 'DD/MM/YYYY'));
+    DBMS_OUTPUT.PUT_LINE('Total Days: ' || v_totalDays);
+    DBMS_OUTPUT.PUT_LINE('Average Daily Boarding: ' || v_avgBoarding);
+
+EXCEPTION
+    WHEN OTHERS THEN
+        RAISE_APPLICATION_ERROR(-20003, 'General error occurred: ' || SQLERRM);
+END;
+/
+
+
+-- Prompt user for start date and end date
+ACCEPT start_date CHAR PROMPT 'Enter the start date (DD/MM/YYYY): '
+ACCEPT end_date CHAR PROMPT 'Enter the end date (DD/MM/YYYY): '
+
+-- Call the procedure with user-provided dates
+BEGIN
+    prc_CalculateAvgDailyBoarding(
+        p_startDate => TO_DATE('&start_date', 'DD/MM/YYYY'),
+        p_endDate => TO_DATE('&end_date', 'DD/MM/YYYY')
+    );
+END;
+/

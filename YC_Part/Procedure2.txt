@@ -1,0 +1,70 @@
+SET PAGESIZE 120
+SET LINESIZE 100
+
+CREATE OR REPLACE PROCEDURE Get_Passenger_Booking_Details (
+    p_passengerID IN CHAR
+)
+IS
+BEGIN
+    -- Retrieve specific passenger's booking details
+    FOR rec IN (
+        SELECT 
+            p.passengerName,
+            p.passportNumber,
+            fs.flightDate AS departureDate,
+            fs.origin,
+            fs.destination,
+            f.airplaneID,
+            f.model AS airplaneModel,
+            b.bookingID,
+            b.bookingDate,
+            b.totalAmount,
+            bd.status AS bookingStatus,
+            bd.price AS bookingPrice,
+            s.seatNumber,
+            bd.wayID
+        FROM
+            Passenger p
+        JOIN 
+            BookingDetails bd ON p.passengerID = bd.passengerID
+        JOIN 
+            Booking b ON bd.bookingID = b.bookingID
+        JOIN 
+            FlightSchedule fs ON bd.depatureSchedule = fs.flightScheduleID
+        JOIN 
+            Airplane f ON fs.airplaneID = f.airplaneID
+        JOIN
+            Seat s ON bd.seatNumber = s.seatNumber AND bd.airplaneID = s.airplaneID
+        WHERE 
+            p.passengerID = p_passengerID
+    ) 
+    LOOP
+        -- Display the booking details
+        DBMS_OUTPUT.PUT_LINE('Passenger Name: ' || rec.passengerName);
+        DBMS_OUTPUT.PUT_LINE('Passport Number: ' || rec.passportNumber);
+        DBMS_OUTPUT.PUT_LINE('Flight Date: ' || TO_CHAR(rec.departureDate, 'DD-MM-YYYY'));
+        DBMS_OUTPUT.PUT_LINE('Origin: ' || rec.origin || ' Destination: ' || rec.destination);
+        DBMS_OUTPUT.PUT_LINE('Airplane Model: ' || rec.airplaneModel || ' (ID: ' || rec.airplaneID || ')');
+        DBMS_OUTPUT.PUT_LINE('Booking ID: ' || rec.bookingID || ' Booking Date: ' || TO_CHAR(rec.bookingDate, 'DD-MM-YYYY'));
+        DBMS_OUTPUT.PUT_LINE('Booking Status: ' || rec.bookingStatus || ' Price: RM ' || rec.bookingPrice);
+        DBMS_OUTPUT.PUT_LINE('Seat Number: ' || rec.seatNumber);
+        DBMS_OUTPUT.PUT_LINE('Way (1=One-way, 2=Return): ' || rec.wayID);
+        DBMS_OUTPUT.PUT_LINE('----------------------------------------');
+    END LOOP;
+
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('No bookings found for the specified passenger.');
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('An error occurred: ' || SQLERRM);
+END;
+/
+
+-- Accept user input for passengerID
+ACCEPT p_passengerID CHAR PROMPT 'Enter Passenger ID: ';
+
+-- Call the procedure with the accepted input
+BEGIN
+    Get_Passenger_Booking_Details('&p_passengerID');
+END;
+/
